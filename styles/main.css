@@ -1,0 +1,556 @@
+html {
+    /* overflow-x: hidden; */
+}
+
+.strip {
+    width: 100%;
+    background-color: var(--light-a);
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+.strip>.base_width {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.strip .bg.icon {
+    background-size: 50%;
+    background-position: center;
+    height: 100%;
+    transition: background-color 0.4s ease;
+}
+
+.strip .bg.icon.tel {}
+
+.strip .bg.icon:hover,
+.strip a:hover .icon {
+    background-color: var(--light);
+    transition: background-color 0s ease;
+}
+
+.strip a,
+.strip a .icon {
+    min-width: 3rem;
+    height: 2rem;
+}
+
+.strip a span {
+    font-weight: 400;
+    font-size: 1.35rem;
+    color: var(--c2-e);
+    letter-spacing: 0.1rem;
+    line-height: 1;
+}
+
+.strip .flex {
+    /* gap:1rem; */
+    align-items: center;
+    height: 100%;
+}
+
+.strip .flex hr {
+    width: 0.1rem;
+    height: 100%;
+    background-color: var(--light);
+    border: unset;
+}
+
+.bg.icon.tel {
+    background-image: url(../assets/icons/tel.svg);
+}
+
+.bg.icon.instagram {
+    background-image: url(../assets/icons/instagram.svg);
+}
+
+.bg.icon.mail {
+    background-image: url(../assets/icons/mail.svg);
+}
+
+
+
+
+
+
+
+
+
+header {
+    width: 100%;
+    height: clamp(5rem, 16vw, 8rem);
+    background-color: var(--light);
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+    border-bottom: 0.2rem solid var(--light-a);
+}
+
+header>.base_width {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+header .flex {
+    align-items: center;
+}
+
+header .logo_anchor {
+    height: 100%;
+    width: clamp(14rem, 35vw, 16rem);
+    min-width: clamp(14rem, 35vw, 16rem);
+}
+
+header .logo_anchor img {
+    height: 100%;
+}
+
+.nav_overflow {
+
+    overflow: hidden;
+
+    position: absolute;
+
+    right: 0;
+
+    bottom: 0;
+
+    width: 100%;
+
+    height: 30rem;
+
+    transform: translateY(100%);
+
+    pointer-events: none;
+}
+
+header nav {
+    position: absolute;
+    right: 0;
+    background-color: var(--c2-a);
+    top: 0;
+    transform: translateX(100%);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 5rem 2rem 3rem;
+    color: var(--light);
+    border-radius: 0 0 0 1rem;
+    box-sizing: border-box;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+header nav.show {
+    transform: translatex(0%);
+}
+
+header nav a {
+    padding: 1rem 0.2rem;
+    position: relative;
+    font-size: clamp(1.6rem, 4vw, 1.8rem);
+}
+
+header nav a:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0.1rem;
+    width: 20%;
+    background-color: var(--c2-c);
+}
+
+header .cta {
+    background-color: var(--c1);
+    font-weight: 700;
+    color: var(--c2);
+    white-space: nowrap;
+}
+
+.cta {
+    border-radius: 0.6rem;
+    font-size: 1.6rem;
+    padding: 1.3rem 2rem;
+    height: fit-content;
+    line-height: 1;
+}
+
+.hambt {
+    position: absolute;
+    right: 0;
+    width: clamp(1.8rem, 4vw, 3rem);
+    height: 2.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.hambt div {
+    height: 0.6rem;
+    width: 100%;
+    background-color: var(--c2);
+    border-radius: 0.2rem 0 0 0.2rem;
+}
+
+
+
+
+
+
+
+.vishyvka {
+    width: 100%;
+    height: 2.5rem;
+    background-image: url(../assets/vyshyvka.svg);
+    background-position: center;
+    background-size: auto;
+    background-repeat: repeat no-repeat;
+}
+
+
+
+
+
+
+
+main {}
+
+section.intro {
+    /* min-height: 100rem; */
+    background-color: var(--c1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: clamp(3rem, 5vw, 7rem) 0 clamp(3rem, 5vw, 5rem) 0;
+    position: relative;
+}
+
+.intro>.ctnr {}
+
+h1 {
+    font-size: clamp(2.2rem, calc(1.8vh + 2vw), 4.6rem);
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+h1 strong {
+    color: var(--c2);
+    background-color: var(--c1-c);
+    font-weight: 600;
+}
+
+.intro h2 {
+    font-weight: 500;
+    font-size: clamp(1.6rem, 2vw, 1.8rem);
+    line-height: 1.45;
+}
+
+.intro h2 strong {
+    font-weight: 600;
+    color: var(--c2);
+}
+
+.intro .cta_ctnr {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    font-weight: 600;
+}
+
+.intro .cta_ctnr .cta {
+    background-color: var(--light);
+    color: var(--c2);
+}
+
+.intro .cta_ctnr a:not(.cta) {
+    font-size: 1.6rem;
+}
+
+.intro .base_width>.ctnr {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 3rem;
+    justify-content: left;
+}
+
+.intro .base_width>.ctnr .content {
+    max-width: 66rem;
+    flex: 1;
+    min-width: 30vw;
+}
+
+.intro video {
+    width: 100%;
+    height: clamp(30rem, calc(30vw + 30vh), 56rem);
+    object-fit: cover;
+    object-position: left;
+    border-radius: 2rem;
+    margin-bottom: calc(clamp(30rem, calc(30vw + 30vh), 60rem) * -0.5);
+    max-width: clamp(30rem, calc(20vw + 30vh), 60rem);
+    border: 0.2rem solid var(--light);
+    margin-inline: auto;
+    max-height: 80vh;
+    z-index: 1;
+}
+
+.intro .bottom_wave {
+    background-image: url(../assets/bottom_wave.svg);
+    width: 100%;
+    height: 10vw;
+    background-size: 100%;
+    background-position: top;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(98%);
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+
+
+
+
+section.services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: calc(calc(clamp(30rem, calc(35vw + 35vh), 50rem) * 0.5) + 0rem) 0 15rem;
+    position: relative;
+}
+
+.services .base_width {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(3rem, 3vw, 4rem);
+    z-index: 1;
+}
+
+.services h2 {
+    text-align: center;
+    font-size: clamp(2rem, 9vw, 5rem);
+    color: var(--c2);
+    font-weight: 700;
+}
+
+.services .splash1,
+.services .splash2 {
+    position: absolute;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.services .splash1 {
+    background-image: url(../assets/splash01.svg);
+    left: 0;
+    top: clamp(6rem, 10vw, 15rem);
+    width: clamp(5rem, 50vw, 55rem);
+    height: clamp(5rem, 50vw, 55rem);
+    background-position: left;
+}
+
+.services .splash2 {
+    background-image: url(../assets/splash02.svg);
+    bottom: -4rem;
+    width: clamp(5rem, 50vw, 55rem);
+    height: clamp(5rem, 50vw, 55rem);
+    background-position: right;
+    right: 0;
+}
+
+.services .ctnr {
+    display: flex;
+    flex-flow: row wrap;
+    gap: clamp(2rem, 9vw, 3.5rem);
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.services .box {
+    position: relative;
+    padding: 2.8rem 2.8rem;
+    box-sizing: border-box;
+    background-color: var(--light-a);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 2rem;
+    min-width: clamp(10rem, 85vw, 30rem);
+    max-width: clamp(10rem, 85vw, 30rem);
+    height: clamp(20rem, 75vw, 38rem);
+    justify-content: space-between;
+    /* max-width: 30rem; */
+    flex: 1;
+    box-shadow: 0 2.5rem 1.5rem -2.5rem var(--c2-e);
+}
+
+.services .box h3 {
+    font-size: clamp(2.2rem, 6vw, 2.5rem);
+    color: var(--c2);
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.services .box p {
+    font-size: clamp(1.5rem, 3vw, 1.6rem);
+    color: var(--c2-d);
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.services .box p b {
+    color: var(--c2);
+    font-weight: 600;
+}
+
+.services .box a {
+    width: 80%;
+    text-align: center;
+    background-color: var(--c2-b);
+    font-weight: 500;
+    color: var(--c1);
+}
+
+.services .box::after {
+    content: '';
+    position: absolute;
+    bottom: -0.4rem;
+    left: 0;
+    right: 0;
+    width: 38%;
+    height: 0.8rem;
+    background-color: var(--c1);
+    margin: 0 auto;
+    border-radius: 1rem;
+}
+
+
+
+
+
+
+
+footer {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:800px) {
+
+    header>.base_width {
+
+        gap: 2rem;
+    }
+
+    header .flex {
+        flex-direction: row-reverse;
+        gap: 3rem;
+        justify-content: flex-end;
+    }
+
+    .hambt {
+        display: none;
+    }
+
+    .nav_overflow {
+        position: relative;
+        overflow: unset;
+        bottom: unset;
+        width: unset;
+        height: 100%;
+        transform: unset;
+        right: unset;
+        max-width: clamp(5rem, calc(90vw - 40rem), 100%);
+    }
+
+    header nav {
+        position: relative;
+        transform: unset;
+        background-color: unset;
+        color: var(--c2);
+        flex-direction: revert;
+        font-weight: 500;
+        overflow-x: auto;
+        padding: unset;
+        gap: 0.5rem;
+        height: 100%;
+        align-items: center;
+    }
+
+    header nav a {
+        font-size: clamp(1.6rem, 1vw, 1.8rem);
+        padding: 1rem 2rem;
+        transition: background-color 0.3s ease;
+        background-color: var(--light);
+        display: flex;
+        align-items: center;
+        border-radius: 0.3rem;
+        white-space: nowrap;
+    }
+
+    header nav a:hover {
+        background-color: var(--light-a);
+        transition: background-color 0s ease;
+    }
+
+    header nav a:not(:last-child)::after {
+        display: none;
+    }
+
+
+
+
+
+
+
+
+
+    .services .ctnr {}
+
+    .services .box {
+        transition: transform 0.6s ease;
+        background-color: rgb(230 243 255 / 90%);
+        backdrop-filter: blur(0.4rem);
+    }
+
+    .services .box a {
+        background-color: var(--light);
+        color: var(--c2-e);
+        transition: color 0.4s ease, background-color 0.4s ease;
+    }
+
+    .services .box:hover {
+        transform:translateY(-1rem);
+        transition: transform 0.2s ease;
+    }
+
+    .services .box:hover a {
+        transition: color 0.1s ease, background-color 0.1s ease;
+        color:var(--c1);
+        background-color:var(--c2-b)
+    }
+}

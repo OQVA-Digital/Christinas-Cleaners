@@ -1,0 +1,164 @@
+:root {
+    --light: #f8f8ff;
+    --light-a:#e6f3ff;
+
+    --dark: #242d35;
+    --dark-a:#1b4354;
+
+    --c1: #ffd700;
+    --c1-a:#bfa300;
+    --c1-b:#403600;
+    --c1-c:#ffe471;
+
+    --c2:#0057b7;
+    --c2-a:#004c9e;
+    --c2-b:#0072d8;
+    --c2-c:#0092ff;
+    --c2-d:#001b38;
+    --c2-e:#93c2e5;
+
+    --base-width: clamp(10rem, 84vw, 150rem);
+}
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+html,
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    cursor: default;
+}
+
+body, button, input, textarea {
+    font-family: 'Golos Text', sans-serif;
+}
+
+body {
+    background-color: var(--light);
+    color:var(--dark);
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    color: unset;
+}
+
+img {
+    user-select: none;
+    max-width: 100%;
+    height:auto;
+    width: auto;
+}
+
+.mobile_hidden {
+    display: none;
+}
+
+::selection {
+    color: var(--light);
+    background-color: var(--dark);
+}
+
+/* ::-webkit-scrollbar {
+    width: 1rem;
+    height: 1rem;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--c3);
+}
+
+::-webkit-scrollbar-thumb {
+    background: white;
+} */
+
+main {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+}
+
+button {
+    background-color: transparent;
+    outline-color: transparent;
+    border: unset;
+    padding: unset;
+    font-family: inherit;
+    -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible {
+    outline: 0.1rem solid transparent;
+}
+
+button:not([type="submit"]):focus-visible {
+    outline: 0.1rem solid transparent;
+}
+
+.flex {
+    display: flex;
+}
+
+.icon {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.base_width {
+    width: var(--base-width);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:1920px) {
+    html {
+        font-size: 11px;
+    }
+}
+
+@media (min-width:2440px) {
+    html {
+        font-size: 13px;
+    }
+}
+
+@media (min-width:3000px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media (min-width:4000px) {
+    html {
+        font-size: 22px;
+    }
+}
