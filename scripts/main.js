@@ -42,7 +42,7 @@ let touchendY = 0
     
 function checkDirection() {
 
-    if(window.matchMedia('(max-width: 1000px)').matches) {
+    if(window.matchMedia('(max-width: 800px)').matches) {
         if((touchendX + (window.innerWidth / 1.9)) < touchstartX && touchendY < (touchstartY + 100) && touchendY > (touchstartY - 100)) {
     
             if(showingMenu == false) {
@@ -52,7 +52,7 @@ function checkDirection() {
     
         if(touchendX > (touchstartX + 30)) {
     
-            console.log(touchstartX + ", " + touchendX)
+            // console.log(touchstartX + ", " + touchendX)
 
             if(showingMenu == true) {
                 toggleNav()
@@ -71,3 +71,26 @@ document.addEventListener('touchend', e => {
   touchendY = e.changedTouches[0].screenY
   checkDirection()
 })
+
+window.addEventListener('scroll', function() {
+    if(showingMenu == true) {
+        toggleNav()
+    }
+})
+
+
+
+
+
+// TINY SLIDER 2
+
+
+var slider = tns({
+    container: '.testimonials .slider',
+    center: true,
+    items: 1,
+    slideBy: 'page',
+    speed: 1000,
+    mouseDrag: true,
+    fixedWidth: window.innerWidth * 0.8,
+  });

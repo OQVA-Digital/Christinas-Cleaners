@@ -45,7 +45,7 @@ body, button, input, textarea {
 
 body {
     background-color: var(--light);
-    color:var(--dark);
+    color: var(--dark-a);
     position: relative;
 }
 
