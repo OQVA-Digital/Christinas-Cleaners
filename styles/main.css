@@ -23,11 +23,13 @@ html {}
     transition: background-color 0.4s ease;
 }
 
-.strip .bg.icon.tel {}
+.strip .bg.icon.tel {
+    margin-right: 1rem;
+}
 
 .strip .bg.icon:hover,
 .strip a:hover .icon {
-    background-color: var(--light);
+    background-color: var(--c2-a);
     transition: background-color 0s ease;
 }
 
@@ -54,7 +56,7 @@ html {}
 .strip .flex hr {
     width: 0.1rem;
     height: 100%;
-    background-color: var(--light);
+    background-color: var(--dark);
     border: unset;
 }
 
