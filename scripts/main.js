@@ -92,5 +92,11 @@ var slider = tns({
     slideBy: 'page',
     speed: 1000,
     mouseDrag: true,
-    fixedWidth: window.innerWidth * 0.8,
+    autoWidth:true,
+    controls:false,
+    navPosition:'bottom',
+    navAsThumbnails:true,
+    preventActionWhenRunning:true,
   });
+
+// fixedWidth: window.innerWidth * 0.8,

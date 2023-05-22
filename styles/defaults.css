@@ -17,7 +17,7 @@
     --c2-d:#001b38;
     --c2-e:#93c2e5;
 
-    --base-width: clamp(10rem, 84vw, 150rem);
+    --base-width: clamp(24rem, 84vw, 150rem);
 }
 
 html {
@@ -121,7 +121,12 @@ button:not([type="submit"]):focus-visible {
     width: var(--base-width);
 }
 
-
+textarea {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 4rem;
+    max-height: 20rem;
+}
 
 
 

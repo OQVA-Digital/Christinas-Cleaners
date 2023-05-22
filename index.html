@@ -26,7 +26,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
 <!--[if (lt IE 9)]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.helper.ie8.js"></script><![endif]-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script src="scripts/tiny-slider.js"></script>
     <!-- NOTE: prior to v2.2.1 tiny-slider.js need to be in <body> -->
 
     <!--
@@ -109,6 +109,8 @@
                     </div>
                     
                     <video src="assets/video/hero.mp4" autoplay playsinline muted loop></video>
+
+                    <img src="assets/ukraine-flag-illustration.png" class="flag" alt="Ukraine Flag Illustration">
                 </div>
             </div>
 
@@ -194,13 +196,119 @@
                     
                     <div class="slider">
                         <div class="box">
+                            <div class="flex">
+                                <div class="profile">
+                                    <div class="photo p1"></div>
 
+                                    <div>
+                                        <span class="name">Isabel</span>
+                                        <span class="location">Bristol</span>
+                                        <hr>
+                                    </div>
+                                </div>
+
+                                <blockquote>
+                                    <p>"Finding a cleaning service that meets my standards can be a challenge, but this one exceeded all my expectations. The team of dedicated and skilled professionals took care of every nook and cranny, leaving my home sparkling clean. It warms my heart to know that this service not only delivers outstanding results but also creates opportunities for female Ukrainian refugees to build a better future for themselves."</p>
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        
+                        <div class="box">
+                            <div class="flex">
+                                <div class="profile">
+                                    <div class="photo p2"></div>
+
+                                    <div>
+                                        <span class="name">James</span>
+                                        <span class="location">London</span>
+                                        <hr>
+                                    </div>
+                                </div>
+
+                                <blockquote>
+                                    <p>"I've had the privilege of having these amazing women clean my house, and I'm blown away by their work ethic and determination. They've overcome so much and are now providing an exceptional cleaning service. I'm grateful for the opportunity to support them and the empowerment they bring to female Ukrainian refugees."</p>
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        
+                        <div class="box">
+                            <div class="flex">
+                                <div class="profile">
+                                    <div class="photo p3"></div>
+
+                                    <div>
+                                        <span class="name">Isabel</span>
+                                        <span class="location">Bristol</span>
+                                        <hr>
+                                    </div>
+                                </div>
+
+                                <blockquote>
+                                    <p>"Finding a cleaning service that meets my standards can be a challenge, but this one exceeded all my expectations. The team of dedicated and skilled professionals took care of every nook and cranny, leaving my home sparkling clean. It warms my heart to know that this service not only delivers outstanding results but also creates opportunities for female Ukrainian refugees to build a better future for themselves."</p>
+                                </blockquote>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="vishyvka"></div>
+        </section>
+
+
+        <section class="contact">
+            <div class="base_width">
+                <div class="ctnr">
+                    <h2>Contact us</h2>
+
+                    <form name="contact" method="POST" data-netlify="true">
+                        <div class="content">
+                            <div>
+                                <p>
+                                    <label>Your Name: <input type="text" name="name" /></label>
+                                </p>
+                                <p>
+                                    <label>Your Email: <input type="email" name="email" /></label>
+                                </p>
+                                <p>
+                                    <label>Your Role: <select name="role[]" multiple>
+                                    <option value="leader">Leader</option>
+                                    <option value="follower">Follower</option>
+                                    </select></label>
+                                </p>
+                                <p>
+                                    <label>Message: <textarea name="message"></textarea></label>
+                                </p>
+                            </div>
+
+                            <div>
+                                <p>
+                                    <label>Your Name: <input type="text" name="name" /></label>
+                                </p>
+                                <p>
+                                    <label>Your Email: <input type="email" name="email" /></label>
+                                </p>
+                                <p>
+                                    <label>Your Role: <select name="role[]" multiple>
+                                    <option value="leader">Leader</option>
+                                    <option value="follower">Follower</option>
+                                    </select></label>
+                                </p>
+                                <p>
+                                    <label>Message: <textarea name="message"></textarea></label>
+                                </p>
+                            </div>
+                        </div>
+                        <p>
+                            <button type="submit">Send</button>
+                        </p>
+                    </form>
+                    
+                    <p class="email_us">Need more details? Drop us an email at <a href="#">christinascleaners@email.com</a>.</p>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -214,7 +322,7 @@
 
             <div class="flex">
                 <a href="#" class="bg icon mail"></a>
-                
+
                 <hr>
 
                 <a href="#" class="bg icon facebook" title="Find us on Facebook"></a>
