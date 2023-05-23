@@ -1,3 +1,38 @@
+// VIDEO LOADING
+
+const introVideo = document.querySelector('.intro video')
+
+introVideo.addEventListener('loadeddata', function() {
+      var videos = [].slice.call(document.querySelectorAll("video.lazy"));
+
+        var videoObserver = new IntersectionObserver(function(entries, observer) {
+          entries.forEach(function(video) {
+              // video.poster = video.dataset.poster;
+              for (var source in video.target.children) {
+                var videoSource = video.target.children[source];
+                if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
+                  videoSource.src = videoSource.dataset.src;
+                }
+              }
+    
+              video.target.load();
+              video.target.classList.remove("lazy");
+              videoObserver.unobserve(video.target);
+          });
+        });
+    
+        videos.forEach(function(video) {
+          videoObserver.observe(video);
+        });
+})
+
+
+
+
+
+
+// TOGGLE NAV
+
 const menuBt = document.querySelector('.hambt')
 const nav = document.querySelector('header nav')
 const navBts = document.querySelectorAll('header nav a')
@@ -82,6 +117,15 @@ window.addEventListener('scroll', function() {
 
 
 
+
+
+
+
+
+
+
+
+
 // TINY SLIDER 2
 
 
@@ -95,8 +139,7 @@ var slider = tns({
     autoWidth:true,
     controls:false,
     navPosition:'bottom',
-    navAsThumbnails:true,
-    preventActionWhenRunning:true,
+    navAsThumbnails:true
   });
 
 // fixedWidth: window.innerWidth * 0.8,

@@ -291,7 +291,7 @@ h1 strong {
     /* background-color: var(--light); */
     color: var(--c2);
     border: 0.2rem solid var(--light);
-    box-shadow: -1rem 1rem var(--light);
+    box-shadow: -0.3rem 0.3rem var(--c1), -0.7rem 0.7rem #fff8;
 }
 
 .cta_ctnr a:not(.cta) {
@@ -358,11 +358,16 @@ h1 strong {
 }
 
 .intro .flag {
-position: absolute;
-width: clamp(8rem, 25vw, 14rem);
-bottom: 7rem;
-right: -0.7rem;
-z-index: 1;
+
+    position: absolute;
+
+    width: clamp(8rem, 25vw, 14rem);
+
+    bottom: 7rem;
+
+    right: -0.7rem;
+
+    z-index: 1;
 }
 
 
@@ -468,6 +473,11 @@ section.services {
     margin-bottom: 1rem;
 }
 
+.services .box h3 svg {
+    width: 2.7rem;
+    height: 2.6rem;
+}
+
 .services .box p {
     font-size: clamp(1.5rem, 3.8vw, 1.6rem);
     color: var(--dark-a);
@@ -525,6 +535,7 @@ section.about {
     justify-content: center;
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
     padding: clamp(7rem, 12vmax, 16rem) 0;
+    background-color: #9f9013;
 }
 
 .about video {
@@ -543,7 +554,7 @@ section.about {
 }
 
 .about .base_width .ctnr {
-    width: clamp(10rem, 85vw, 46rem);
+    width: clamp(10rem, 85vw, 59rem);
     border-radius: 1.2rem;
     background-color: rgb(248 248 255 / 85%);
     /* max-height: 80vh; */
@@ -555,6 +566,10 @@ section.about {
     border: 0.2rem solid var(--light);
     box-shadow: 0 2rem 5rem -2.3rem var(--c1-c);
     backdrop-filter: blur(0.6rem);
+}
+
+.about .cta_ctnr {
+    margin-top: 1rem;
 }
 
 .ctnr {}
@@ -574,7 +589,6 @@ section.about {
     font-size: clamp(1.3rem, 3.8vw, 1.7rem);
     font-weight: 500;
     line-height: 1.55;
-    margin-bottom: 1rem;
 }
 
 .about p strong {
@@ -714,6 +728,14 @@ section.testimonials {
 
 .profile .photo.p1 {
     background-image: url(../assets/testimonials/placeholder01.jpg);
+}
+
+.profile .photo.p2 {
+    background-image: url(../assets/testimonials/placeholder02.jpg);
+}
+
+.profile .photo.p3 {
+    background-image: url(../assets/testimonials/placeholder03.jpg);
 }
 
 .profile .name {
@@ -875,11 +897,11 @@ section.contact {
     justify-content: space-evenly;
 }
 
-.contact form .content > div {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+.contact form .content>div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .contact form label {
