@@ -257,7 +257,7 @@ section.intro {
 h1 {
     font-size: clamp(2.1rem, calc(1.8vh + 2vw), 4.6rem);
     line-height: 1.4;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;
     font-weight: 700;
 }
 
@@ -318,7 +318,7 @@ h1 strong {
 .intro .base_width>.ctnr {
     display: flex;
     flex-flow: row wrap;
-    gap: 4rem;
+    gap: clamp(2rem, 4vmax, 4rem);
     justify-content: left;
     position: relative;
 }
@@ -357,18 +357,13 @@ h1 strong {
     box-shadow: 0 -0.3rem var(--c1);
 }
 
-.intro .flag {
-
+/* .intro .flag {
     position: absolute;
-
     width: clamp(8rem, 25vw, 14rem);
-
     bottom: 7rem;
-
     right: -0.7rem;
-
     z-index: 1;
-}
+} */
 
 
 
@@ -545,6 +540,7 @@ section.about {
     width: 100%;
     object-fit: cover;
     pointer-events: none;
+    object-position: top;
 }
 
 .about .base_width {
@@ -564,12 +560,13 @@ section.about {
     flex-direction: column;
     gap: 1rem;
     border: 0.2rem solid var(--light);
-    box-shadow: 0 2rem 5rem -2.3rem var(--c1-c);
+    /* box-shadow: 0 2rem 5rem -2.3rem var(--c1-c); */
     backdrop-filter: blur(0.6rem);
 }
 
 .about .cta_ctnr {
-    margin-top: 1rem;
+    
+margin-top: 1rem;
 }
 
 .ctnr {}
@@ -588,12 +585,12 @@ section.about {
 .about .base_width p {
     font-size: clamp(1.3rem, 3.8vw, 1.7rem);
     font-weight: 500;
-    line-height: 1.55;
+    line-height: 1.5;
 }
 
-.about p strong {
+.about p strong, .about p b {
     color: var(--c2-b);
-    font-weight: 600;
+    font-weight: inherit;
 }
 
 .about .cta {
@@ -645,8 +642,8 @@ section.testimonials {
 
 .testimonials .stars {
     background-image: url(../assets/icons/star.svg);
-    width: clamp(1rem, 30vw, 12rem);
-    height: calc(clamp(1rem, 30vw, 12rem) / 6);
+    width: clamp(1rem, 30vw, 11rem);
+    height: calc(clamp(1rem, 30vw, 11rem) / 6);
     background-repeat: repeat-x;
     background-repeat: space;
     margin-bottom: -2rem;
@@ -723,7 +720,7 @@ section.testimonials {
     z-index: 1;
     background-color: var(--c2);
     box-shadow: 0.7rem 0.7rem 1.5rem #0002, -0.7rem -0.7rem 1.5rem #fff2;
-    border: 0.2rem solid var(--c2);
+    /* border: 0.2rem solid var(--c2); */
 }
 
 .profile .photo.p1 {
@@ -809,7 +806,7 @@ section.contact {
     display: flex;
     justify-content: center;
     background-color: var(--c1);
-    padding: 6rem 0;
+    padding: clamp(6rem, 10vw, 10rem) 0 clamp(6rem, 10vw, 7rem);
 }
 
 .contact .base_width {
@@ -822,11 +819,25 @@ section.contact {
     width: clamp(10rem, 85vw, 80rem);
     background-color: var(--light);
     border-radius: 3rem;
-    padding: 4rem clamp(0.8rem, 4vw, 6rem);
+    padding: 4rem clamp(0.8rem, 4vw, 6rem) 3rem;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
+}
+
+.contact .ctnr::before {
+    content:'';
+    position: absolute;
+    width: 14rem;
+    height: 0.9rem;
+    background-color: var(--c2-b);
+    top: -0.45rem;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    border-radius: 2rem;
 }
 
 .contact h2 {
@@ -841,6 +852,7 @@ section.contact {
     font-size: 1.4rem;
     font-weight: 500;
     color: var(--c2-d);
+    line-height: 1.8;
 }
 
 .contact .email_us a {
@@ -1009,11 +1021,11 @@ section.contact {
         padding-bottom: 2rem;
     }
 
-    .intro .flag {
+    /* .intro .flag {
         top: -4rem;
         bottom: unset;
         right: 1rem;
-    }
+    } */
 
     .intro video {
         width: clamp(30rem, 41vw, 58rem);
