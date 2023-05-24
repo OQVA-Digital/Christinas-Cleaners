@@ -1075,6 +1075,7 @@ section.contact {
     font-size: 1em;
     box-sizing: border-box;
     display: block;
+    width: 100%;
 }
 
 .contact form .obs {
