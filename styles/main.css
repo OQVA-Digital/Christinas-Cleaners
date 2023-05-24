@@ -515,13 +515,14 @@ h2+.txt {
     visibility: hidden;
     position: absolute;
     inset: 0;
-    top: 3.8rem;
+    top: 2.6rem;
+    right: 0.6rem;
     background-color: var(--light-a);
     padding: 1.5rem;
     box-sizing: border-box;
     height: fit-content;
     margin: 0 2rem 0 auto;
-    font-size: 1.35rem;
+    font-size: clamp(1.3rem, 3.5vw, 1.4rem);
     border-radius: 0.6rem 0 0.6rem 0.6rem;
     transition: opacity 0.3s 0.2s ease, visibility 0.3s 0.2s ease, transform 0.3s 0.2s ease;
     transform: translateY(-0.5rem);
@@ -531,19 +532,18 @@ h2+.txt {
     box-shadow: 0 1.2rem 1rem -1rem var(--c2-e);
     z-index: 2;
     max-width: 42rem;
-    width: 81%;
+    width: 87%;
 }
 
 .services .box .tooltip p::before {
     content: '';
     position: absolute;
-    right: -0.1rem;
+    right: 0;
     top: 0;
-    border-top: 0.5rem solid transparent;
-    border-right: 0.5rem solid var(--c2-e);
-    border-left: 0.5rem solid transparent;
-    border-bottom: 0.5rem solid var(--c2-e);
-    transform: translateY(-100%);
+    border-top: 0.7rem solid var(--c2-e);
+    border-right: 0.7rem solid var(--c2-e);
+    border-left: 0.7rem solid transparent;
+    border-bottom: 0.7rem solid transparent;
 }
 
 .services .box .tooltip button {
@@ -559,9 +559,15 @@ h2+.txt {
     border: 0.1rem solid var(--c2-e);
     /* padding: 0.8rem; */
     box-sizing: border-box;
-    border-radius: 0.5rem;
+    border-radius: 0.4rem;
     background-color: var(--light);
     cursor: help;
+    transition: border-color 0.3s ease;
+}
+
+.services .box .tooltip button:hover {
+    border-color:var(--c2-a);
+    transition: border-color 0.05s ease;
 }
 
 .services .box .tooltip:hover p,
@@ -590,7 +596,7 @@ h2+.txt {
     font-weight: 500;
     line-height: 1.4;
     margin-bottom: 1rem;
-    font-size: 1.4rem;
+    font-size: clamp(1.4rem, 3.5vw, 1.5rem);
 }
 
 .services .box p b,
@@ -794,7 +800,7 @@ section.testimonials {
 .testimonials h2 {
     font-size: clamp(2rem, 9vw, 4.5rem);
     color: var(--c1);
-    font-weight: 500;
+    font-weight: 600;
     text-align: center;
     margin-bottom: 0.5rem;
     position: relative;
@@ -985,7 +991,7 @@ section.testimonials {
 section.contact {
     display: flex;
     background-color: var(--c1);
-    padding: 0 0 clamp(6rem, 10vw, 7rem);
+    padding: 0 0 clamp(6rem, 10vw, 9rem);
     flex-direction: column;
     align-items: center;
     scroll-margin: var(--header-height);
@@ -998,7 +1004,7 @@ section.contact {
 }
 
 .contact .ctnr {
-    width: clamp(10rem, 85vw, 80rem);
+    width: clamp(10rem, 85vw, 90rem);
     background-color: var(--light);
     border-radius: 3rem;
     padding: 4rem clamp(0.8rem, 5vw, 6rem) 3rem;
@@ -1007,6 +1013,7 @@ section.contact {
     flex-direction: column;
     justify-content: space-between;
     position: relative;
+    box-shadow: 0 2.2rem 1.3rem -1.2rem rgb(191 163 0 / 50%);
 }
 
 .contact .ctnr::before {
@@ -1025,7 +1032,7 @@ section.contact {
 .contact h2 {
     text-align: center;
     font-size: clamp(2rem, 9vw, 4rem);
-    color: var(--c2);
+    color: var(--c2-b);
     font-weight: 700;
 }
 
@@ -1065,7 +1072,7 @@ section.contact {
 
 .contact h2+.txt {
     font-weight: 500;
-    width: 90%;
+    max-width: 60rem;
 }
 
 .contact h2+.txt b,
@@ -1130,7 +1137,7 @@ section.contact {
     display: flex;
     gap: clamp(2rem, 2vw, 4rem);
     flex-flow: row wrap;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .contact form .content>div {
@@ -1138,7 +1145,7 @@ section.contact {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    width: clamp(10rem, 70vw, 32rem);
+    width: clamp(10rem, 70vw, 37rem);
 }
 
 .contact form label {
