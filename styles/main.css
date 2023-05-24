@@ -120,14 +120,22 @@ header .logo_anchor img {
 }
 
 .nav_overflow {
-overflow: hidden;
-position: absolute;
-right: 0;
-bottom: 0.1rem;
-width: 23rem;
-height: 40rem;
-transform: translateY(100%);
-pointer-events: none;
+
+overflow: hidden;
+
+position: absolute;
+
+right: 0;
+
+bottom: 0.1rem;
+
+width: 23rem;
+
+height: 40rem;
+
+transform: translateY(100%);
+
+pointer-events: none;
 }
 
 header nav {
@@ -422,6 +430,7 @@ h2+.txt {
     font-weight: 300;
     max-width: 64rem;
     margin-bottom: 0;
+    width: 86%;
 }
 
 .testimonials h2+.txt strong,
@@ -579,11 +588,6 @@ h2+.txt {
     border: 0.3rem solid var(--c2-b);
 }
 
-.services .box.highlight .cta {
-
-    color: var(--c2-c);
-}
-
 .services .box .tooltip button:hover {
     border-color: var(--c2-a);
     transition: border-color 0.05s ease;
@@ -644,6 +648,7 @@ h2+.txt {
     background-color: var(--c1);
     margin: 0 auto;
     border-radius: 1rem;
+    box-shadow: 0 -0.7rem 0 0.7rem var(--light-a);
 }
 
 
@@ -671,7 +676,7 @@ section.about {
     align-items: center;
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
     padding: clamp(7rem, 18vmax, 14rem) 0 0;
-    background-color: #9f9013;
+    background-color: var(--c2-e);
 }
 
 .about video {
@@ -780,7 +785,7 @@ section.about {
 }
 
 .about .social_impact p {
-    font-size: clamp(1.4rem, 3.6vmin, 1.8rem);
+    font-size: clamp(1.3rem, 3.8vw, 1.8rem);
     margin-bottom: 1rem;
     line-height: 1.5;
     font-weight: 500;
@@ -1261,7 +1266,7 @@ section.contact {
 
     .services .box a {
         background-color: var(--light);
-        color: var(--c2-e);
+        color: var(--c2-c);
         transition: color 0.7s ease, background-color 0.7s ease;
     }
 
@@ -1271,8 +1276,7 @@ section.contact {
         box-shadow: 0 3.5rem 2rem -2rem rgb(147 194 229 / 30%);
     }
 
-    .services .box:hover a,
-    .services .box.highlight:hover a {
+    .services .box:hover a {
         transition: color 0.3s ease, background-color 0.3s ease, filter 0.3s ease;
         color: var(--c1);
         background-color: var(--c2-b)
