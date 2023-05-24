@@ -498,9 +498,10 @@ h2+.txt {
     align-items: center;
     gap: 1.6rem;
     border-radius: 2rem;
-    min-width: clamp(10rem, 38vmax, 32rem);
-    max-width: clamp(10rem, 38vmax, 32rem);
-    min-height: clamp(20rem, 75vw, 38rem);
+    min-width: clamp(15rem, calc(33vh + 20vw), 32rem);
+    max-width: clamp(15rem, calc(33vh + 20vw), 32rem);
+    max-width: 85vw;
+    /* min-height: clamp(20rem, 75vw, 38rem); */
     justify-content: space-between;
     /* max-width: 30rem; */
     flex: 1;
@@ -515,7 +516,7 @@ h2+.txt {
     visibility: hidden;
     position: absolute;
     inset: 0;
-    top: 4.5rem;
+    top: 3.8rem;
     background-color: var(--light-a);
     padding: 1.5rem;
     box-sizing: border-box;
@@ -529,6 +530,7 @@ h2+.txt {
     color: var(--dark-a);
     border: 0.1rem solid var(--c2-e);
     box-shadow: 0 1.2rem 1rem -1rem var(--c2-e);
+    z-index: 2;
 }
 
 .services .box .tooltip p::before {
@@ -595,11 +597,12 @@ h2+.txt {
 }
 
 .services .box a {
-    width: 80%;
+    width: 100%;
     text-align: center;
     background-color: var(--c2-b);
     font-weight: 500;
     color: var(--c1);
+    box-sizing: border-box;
 }
 
 .services .box::after {
@@ -1345,5 +1348,6 @@ margin: 0 auto;
 
     .services .box {
         min-width: unset;
+        max-width: 34rem;
     }
 }
