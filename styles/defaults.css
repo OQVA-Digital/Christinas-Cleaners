@@ -40,7 +40,7 @@ h6 {
     cursor: default;
 }
 
-body, button, input, textarea {
+body, button, input, textarea, select {
     font-family: 'Golos Text', sans-serif;
 }
 

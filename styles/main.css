@@ -995,7 +995,7 @@ section.contact {
     width: clamp(10rem, 85vw, 80rem);
     background-color: var(--light);
     border-radius: 3rem;
-    padding: 4rem clamp(0.8rem, 4vw, 6rem) 3rem;
+    padding: 4rem clamp(0.8rem, 5vw, 6rem) 3rem;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -1041,13 +1041,13 @@ section.contact {
 
 
 .contact form {
-    margin: 0 auto 3rem;
+    margin: 0 auto 2rem;
     display: flex;
     flex-direction: column;
     /* gap: clamp(2rem, 2vw, 4rem); */
-    font-size: 1.4rem;
+    font-size: 1.45rem;
     justify-content: space-evenly;
-    width: 91%;
+    /* width: 91%; */
 }
 
 .contact .vishyvka {
@@ -1059,7 +1059,7 @@ section.contact {
 
 .contact h2+.txt {
     font-weight: 500;
-    width: 96%;
+    width: 90%;
 }
 
 .contact h2+.txt b,
@@ -1067,14 +1067,20 @@ section.contact {
     font-weight: 600;
 }
 
-.contact input,
-.contact textarea {
-    padding: 0.8rem;
+.contact input, .contact textarea, .contact select {
+    padding: clamp(0.8rem, 1vw, 1rem);
     border-radius: 0.6rem;
     border: unset;
     background-color: #E8E8F9;
-    font-size: 1.1em;
+    font-size: 1em;
     box-sizing: border-box;
+}
+
+.contact form .obs {
+    line-height: 1.4;
+    color: var(--c2-a);
+    font-weight: 500;
+    font-size: 1em;
 }
 
 .contact button[type='submit'] {
@@ -1086,7 +1092,7 @@ section.contact {
     width: 100%;
     padding: 1.3rem;
     border-radius: 0.6rem;
-    margin-top: 2rem;
+    margin-top: clamp(2rem, 2vw, 3rem);
     letter-spacing: 0.1rem;
     cursor: pointer;
 }
@@ -1110,7 +1116,7 @@ section.contact {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 1.3rem;
+    gap: 1.5rem;
 }
 
 .contact form label {
@@ -1118,6 +1124,7 @@ section.contact {
     flex-direction: column;
     gap: 0.5rem;
     font-weight: 600;
+    line-height: 1.4;
 }
 
 

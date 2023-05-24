@@ -43,9 +43,9 @@
 <body>
     <div class="strip">
         <div class="base_width">
-            <a href="#" class="flex" title="call us">
+            <a href="tel:447425078684" class="flex" title="call us">
                 <div class="bg icon tel"></div>
-                <span>+44 115 496 0282</span>
+                <span>+44 742 507 8684</span>
             </a>
 
             <div class="flex">
@@ -84,7 +84,7 @@
                         <a href="#about-us">About</a>
                         <a href="#testimonials">Testimonials</a>
                         <a href="#social-impact">Social Impact</a>
-                        <a href="tel:+441154960282">Call us</a>
+                        <a href="tel:447425078684">Call us</a>
                         <a href="mailto:info@christinas-cleaners.co.uk">Email us</a>
                     </nav>
                 </div>
@@ -218,8 +218,8 @@
                     <p><strong>Located in Oxfordshire</strong>, we serve various areas including Headington, Cowley, Marston, Botley, and beyond, delivering consistent, high-quality cleaning services while making a difference.</p>
 
                     <div class="cta_ctnr">
-                        <a href="#" class="cta">Get a quote</a>
-                        <a href="#">+44 115 496 0282</a>
+                        <a href="#get-a-quote" class="cta">Get a quote</a>
+                        <a href="tel:447425078684">+44 742 507 8684</a>
                     </div>
                 </div>
             </div>
@@ -318,7 +318,7 @@
             <div class="base_width">
                 <div class="ctnr">
 
-                    <form name="contact" method="POST" data-netlify="true">
+                    <form name="quote-submission" method="POST" data-netlify="true">
                         <h2>Get a Quote</h2>
     
                         <div class="txt"><strong>Christina's Cleaners operates across Oxford and its surrounding villages</strong>, including Headington, Cowley, Marston, Botley, and many more.</div>
@@ -326,42 +326,147 @@
                         <div class="content">
                             <div>
                                 <p>
-                                    <label>Your Name: <input type="text" name="name" /></label>
+                                    <label>Your Name: <input type="text" name="name" required/>
+                                    </label>
                                 </p>
+
                                 <p>
-                                    <label>Your Email: <input type="email" name="email" /></label>
+                                    <label>Surname: <input type="text" name="surname" required/>
+                                    </label>
                                 </p>
+
                                 <p>
-                                    <label>Your Role: <select name="role[]" multiple>
-                                    <option value="leader">Leader</option>
-                                    <option value="follower">Follower</option>
-                                    </select></label>
+                                    <label>Email: <input type="email" name="email" required/></label>
                                 </p>
+
                                 <p>
-                                    <label>Message: <textarea name="message"></textarea></label>
+                                    <label for="phone">Contact Number:
+                                        <input type="tel" id="phone" name="phone" required>
+                                    </label>
+                                </p>
+
+                                <p>
+                                    <label for="contactPreference">Preferred method of contact:
+                                        <select id="contactPreference" name="contactPreference" required>
+                                          <option value="Email">Email</option>
+                                          <option value="Phone">Phone</option>
+                                        </select>
+                                    </label>
+                                </p>
+
+                                <p>
+                                    <label for="streetAddress">Street Address:
+                                        <input type="text" id="streetAddress" name="streetAddress" required>
+                                    </label>
+                                </p>
+
+                                <p>
+                                    <label for="postcode">Postcode:
+                                        <input type="text" id="postcode" name="postcode" required>
+                                    </label>
+                                </p>
+
+                                <p>
+                                    <label for="city">City:
+                                        <input type="text" id="city" name="city" required>
+                                    </label>
+                                </p>
+                                
+                                <p>
+                                    <label for="specialInstruction">Are there any special instruction for finding your property?
+                                        <textarea id="specialInstruction" name="specialInstruction"></textarea>
+                                    </label>
+                                </p>
+
+                                <p>
+                                    <label for="cleaningService">Type of Cleaning Service required:
+                                        <select id="cleaningService" name="cleaningService" required>
+                                            <option value="Regular Domestic Cleaning">Basic Clean</option>
+                                            <option value="Subscription-based Regular Cleaning">Deep Clean</option>
+                                            <option value="Specialised Cleaning Services">End of Tenancy Clean</option>
+                                        </select>
+                                    </label>
+                                </p>
+
+                                <p>
+                                    <label for="bedrooms">Number of Bedrooms:
+                                        <input type="number" id="bedrooms" name="bedrooms" required>
+                                    </label>
+                                </p>
+
+                                <p>
+                                    <label for="bathrooms">Number of Bathrooms:
+                                        <input type="number" id="bathrooms" name="bathrooms" required>
+                                    </label>
                                 </p>
                             </div>
 
+
+
                             <div>
                                 <p>
-                                    <label>Your Name: <input type="text" name="name" /></label>
+                                    <label for="otherRooms">Other rooms requiring cleaning (Please specify):
+                                        <textarea id="otherRooms" name="otherRooms"></textarea>
+                                    </label>
                                 </p>
+
                                 <p>
-                                    <label>Your Email: <input type="email" name="email" /></label>
+                                    <label for="extraAttention">Are there any specific areas needing extra attention or services required beyond the standard cleaning package?
+                                        <textarea id="extraAttention" name="extraAttention"></textarea>
+                                    </label>
                                 </p>
+
                                 <p>
-                                    <label>Your Role: <select name="role[]" multiple>
-                                    <option value="leader">Leader</option>
-                                    <option value="follower">Follower</option>
-                                    </select></label>
+                                    <label for="cleaningDate">Preferred Start Date:
+                                        <input type="date" id="cleaningDate" name="cleaningDate" required>
+                                    </label>
                                 </p>
+
                                 <p>
-                                    <label>Message: <textarea name="message"></textarea></label>
+                                    <label for="cleaningTime">Preferred Start Time:
+                                        <input type="time" id="cleaningTime" name="cleaningTime" required>
+                                    </label>
                                 </p>
+
+                                <p>
+                                    <label for="frequency">Frequency of Cleaning:
+                                        <select id="frequency" name="frequency" required>
+                                            <option value="One-time">One-time</option>
+                                            <option value="Weekly">Weekly</option>
+                                            <option value="Bi-weekly">Bi-weekly</option>
+                                            <option value="Monthly">Monthly</option>
+                                        </select>
+                                    </label>
+                                </p>
+
+                                <p>
+                                    <label for="instructions">Are there any specific cleaning instructions or special requests?
+                                        <textarea id="instructions" name="instructions"></textarea>
+                                    </label>
+                                </p>
+
+                                <p>
+                                    <label for="pets">Are there any pets in the house? If yes, please specify.
+                                        <textarea id="pets" name="pets"></textarea>
+                                    </label>
+                                </p>
+
+                                <p>
+                                    <label for="payment">Preferred Method of Payment:
+                                        <select id="payment" name="payment" required>
+                                            <option value="Credit Card">Credit Card</option>
+                                            <option value="Debit Card">Debit Card</option>
+                                            <option value="Bank Transfer">Bank Transfer</option>
+                                            <option value="Cash">Cash</option>
+                                        </select>
+                                    </label>
+                                </p>
+
+                                <p class="obs">Please note that your booking is <b>subject to confirmation</b>. We will contact you shortly to confirm the details of your booking and provide you with a quote.</p>
                             </div>
                         </div>
                         <p>
-                            <button class="cta" type="submit">Submit</button>
+                            <button class="cta" type="submit">Get a Quote!</button>
                         </p>
                     </form>
                     
@@ -374,9 +479,9 @@
 
     <footer class="strip">
         <div class="base_width">
-            <a href="#" class="flex">
+            <a href="tel:447425078684" class="flex">
                 <div class="bg icon tel"></div>
-                <span>+44 115 496 0282</span>
+                <span>+44 742 507 8684</span>
             </a>
 
             <div class="flex">
