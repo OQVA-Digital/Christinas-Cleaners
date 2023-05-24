@@ -506,7 +506,6 @@ h2+.txt {
     /* max-width: 30rem; */
     flex: 1;
     box-shadow: 0 2.5rem 1rem -2rem rgb(147 194 229 / 40%);
-    font-size: 1.4rem;
 }
 
 .services .tooltip {}
@@ -1074,7 +1073,9 @@ section.contact {
     font-weight: 600;
 }
 
-.contact input, .contact textarea, .contact select {
+.contact input,
+.contact textarea,
+.contact select {
     padding: clamp(0.8rem, 1vw, 1rem);
     border-radius: 0.6rem;
     border: unset;
@@ -1087,21 +1088,20 @@ section.contact {
     max-width: 100%;
 }
 
+.contact input[type='date'], .contact input[type='time'] {
+    line-height: 2.4;
+    padding: unset;
+    text-indent: clamp(0.8rem, 1vw, 1rem);
+}
+
 .contact form .obs {
-    
-line-height: 1.5;
-    
-color: var(--c2);
-    
-font-weight: 600;
-    
-font-size: 0.9em;
-    
-text-align: center;
-    
-width: 90%;
-    
-margin: 0 auto;
+    line-height: 1.5;
+    color: var(--c2);
+    font-weight: 600;
+    font-size: 0.9em;
+    text-align: center;
+    max-width: 27rem;
+    margin: 0 auto;
 }
 
 .contact button[type='submit'] {
