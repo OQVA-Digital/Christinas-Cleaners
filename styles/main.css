@@ -427,7 +427,7 @@ h2+.txt {
     color: var(--light-a);
     font-weight: 300;
     max-width: 64rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
 }
 
 .testimonials h2+.txt strong,
@@ -1047,7 +1047,7 @@ section.contact {
     /* gap: clamp(2rem, 2vw, 4rem); */
     font-size: 1.45rem;
     justify-content: space-evenly;
-    /* width: 91%; */
+    width: 100%;
 }
 
 .contact .vishyvka {
@@ -1076,6 +1076,8 @@ section.contact {
     box-sizing: border-box;
     display: block;
     width: 100%;
+    min-width: 100%;
+    max-width: 100%;
 }
 
 .contact form .obs {
