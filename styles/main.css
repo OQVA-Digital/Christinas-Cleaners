@@ -87,7 +87,7 @@ html {}
 
 header {
     width: 100%;
-    height: clamp(5rem, calc(7vh + 7vw), 8rem);
+    height: var(--header-height);
     background-color: rgb(248 248 255 / 95%);
     position: sticky;
     top: 0;
@@ -398,6 +398,7 @@ section.services {
     align-items: center;
     padding: clamp(14rem, 55vw, 23rem) 0 clamp(9rem, 10vw, 13rem);
     position: relative;
+    scroll-margin: calc(clamp(14rem, 55vw, 23rem) * -0.5);
 }
 
 .services .base_width {
@@ -410,15 +411,14 @@ section.services {
 
 h2+.txt {
     text-align: center;
-    font-size: clamp(1.4rem, 3.6vmin, 1.6rem);
+    font-size: clamp(1.4rem, 3.6vmin, 1.55rem);
     margin: 1rem auto 3rem;
-    line-height: 1.4;
+    line-height: 1.5;
     width: var(--base-width);
     max-width: 100%;
 }
 
 .services h2+.txt {
-    color: var(--c2-a);
     font-weight: 500;
     max-width: 87rem;
 }
@@ -515,7 +515,7 @@ h2+.txt {
     visibility: hidden;
     position: absolute;
     inset: 0;
-    top: 4rem;
+    top: 4.5rem;
     background-color: var(--light-a);
     padding: 1.5rem;
     box-sizing: border-box;
@@ -532,7 +532,7 @@ h2+.txt {
 }
 
 .services .box .tooltip p::before {
-    content:'';
+    content: '';
     position: absolute;
     right: -0.1rem;
     top: 0;
@@ -544,8 +544,8 @@ h2+.txt {
 }
 
 .services .box .tooltip button {
-    width: 1.6rem;
-    height: 1.6rem;
+    width: 1.8rem;
+    height: 1.8rem;
     background-image: url(../assets/icons/tooltip.svg);
     background-size: 18%;
     background-position: center;
@@ -556,7 +556,7 @@ h2+.txt {
     border: 0.1rem solid var(--c2-e);
     /* padding: 0.8rem; */
     box-sizing: border-box;
-    border-radius: 0.4rem;
+    border-radius: 0.5rem;
     background-color: var(--light);
 }
 
@@ -636,9 +636,10 @@ h2+.txt {
 section.about {
     position: relative;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-    padding: clamp(7rem, 18vmax, 16rem) 0;
+    padding: clamp(7rem, 18vmax, 14rem) 0 0;
     background-color: #9f9013;
 }
 
@@ -654,14 +655,14 @@ section.about {
 
 .about .base_width {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     z-index: 1;
 }
 
 .about .base_width .ctnr {
     width: clamp(10rem, 85vw, 58rem);
     border-radius: 1.2rem;
-    background-color: rgb(248 248 255 / 85%);
+    background-color: rgb(230 243 255 / 85%);
     /* max-height: 80vh; */
     padding: clamp(2.6rem, 6vw, 3.5rem);
     box-sizing: border-box;
@@ -723,10 +724,52 @@ section.about {
 
 
 
+
+
+
+.about .social_impact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: clamp(4rem, 12vw, 7rem) 0;
+    background-color: rgb(230 243 255 / 85%);
+    width: 100%;
+    z-index: 1;
+    backdrop-filter: blur(0.4rem);
+    margin-top: clamp(6rem, 12vmax, 14rem);
+    scroll-margin: var(--header-height);
+}
+
+.social_impact h2 {
+    /* text-align: center; */
+    font-size: clamp(2rem, 9vw, 5rem);
+    color: var(--c2-b);
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.about .social_impact p {
+    font-size: clamp(1.4rem, 3.6vmin, 1.7rem);
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    font-weight: 500;
+    max-width: 78rem;
+}
+
+
+
+
+
+
+
+
+
+
 section.testimonials {
     display: flex;
     flex-direction: column;
     align-items: center;
+    scroll-margin: var(--header-height);
 }
 
 .testimonials .base_width {
@@ -939,6 +982,7 @@ section.contact {
     padding: 0 0 clamp(6rem, 10vw, 7rem);
     flex-direction: column;
     align-items: center;
+    scroll-margin: var(--header-height);
 }
 
 .contact .base_width {
@@ -981,7 +1025,7 @@ section.contact {
 
 .contact .email_us {
     text-align: center;
-    font-size: 1.4rem;
+    font-size: clamp(1rem, 3.5vw, 1.4rem);
     font-weight: 500;
     color: var(--c2-d);
     line-height: 1.8;
@@ -992,6 +1036,7 @@ section.contact {
     font-weight: 600;
     background-color: var(--light-a);
     padding: 0.3rem 0;
+    white-space: nowrap;
 }
 
 
@@ -1008,12 +1053,13 @@ section.contact {
 .contact .vishyvka {
     margin-bottom: clamp(6rem, 10vw, 7rem);
     position: sticky;
-    top: clamp(5rem, calc(7vh + 7vw), 8rem);
+    top: var(--header-height);
     z-index: 1;
 }
 
 .contact h2+.txt {
     font-weight: 500;
+    width: 96%;
 }
 
 .contact h2+.txt b,
@@ -1138,16 +1184,17 @@ section.contact {
         gap: 0.5rem;
         height: 100%;
         align-items: center;
-        width: clamp(5rem, calc(98vw - 50rem), 74rem);
+        width: clamp(5rem, calc(98vw - 50rem), 82rem);
         right: unset;
         top: unset;
         white-space: nowrap;
         display: inline-flex;
+        background-image: unset;
     }
 
     header nav a {
         font-size: clamp(1.6rem, 1vw, 1.8rem);
-        padding: 1rem clamp(1.2rem, 1.5vw, 2rem);
+        padding: 1rem clamp(1.2rem, 1.5vw, 1.8rem);
         transition: background-color 0.3s ease;
         background-color: transparent;
         display: inline-block;
@@ -1243,10 +1290,6 @@ section.contact {
 
     .testimonials .stars {
         margin-bottom: -2rem;
-    }
-
-    .testimonials .slider {
-        align-items: center;
     }
 }
 

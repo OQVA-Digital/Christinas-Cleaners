@@ -64,11 +64,6 @@ function toggleNav() {
 menuBt.addEventListener('click', toggleNav)
 
 
-for(i=0;i<navBts.length;i++) {
-    navBts[i].addEventListener('click', toggleNav)
-}
-
-
 let touchstartX = 0
 let touchendX = 0
 
