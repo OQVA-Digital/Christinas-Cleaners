@@ -198,7 +198,7 @@ header .cta {
 }
 
 .cta:hover {
-    filter:brightness(1.1)
+    filter: brightness(1.1)
 }
 
 .hambt {
@@ -227,6 +227,7 @@ header .cta {
     background-position: center;
     background-size: auto;
     background-repeat: repeat no-repeat;
+    background-color: var(--light);
 }
 
 
@@ -274,10 +275,10 @@ h1 strong {
 
 .intro h2 {
     font-weight: 500;
-    font-size: clamp(1.4rem, 3.3vmin, 2rem);
+    font-size: clamp(1.4rem, 3.3vmin, 1.7rem);
     line-height: 1.45;
     margin-bottom: 2rem;
-    max-width: 59rem;
+    /* max-width: 59rem; */
 }
 
 .intro h2 strong {
@@ -403,8 +404,47 @@ section.services {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: clamp(3rem, 3vw, 4rem);
+    /* gap: clamp(3rem, 3vw, 4rem); */
     z-index: 1;
+}
+
+h2+.txt {
+    text-align: center;
+    font-size: clamp(1.4rem, 3.6vmin, 1.6rem);
+    margin: 1rem auto 3rem;
+    line-height: 1.4;
+    width: var(--base-width);
+    max-width: 100%;
+}
+
+.services h2+.txt {
+    color: var(--c2-a);
+    font-weight: 500;
+    max-width: 87rem;
+}
+
+.testimonials h2+.txt {
+    color: var(--light-a);
+    font-weight: 300;
+    max-width: 64rem;
+    margin-bottom: 1rem;
+}
+
+.testimonials h2+.txt strong,
+.testimonials h2+.txt b {
+    font-weight: inherit;
+    color: var(--c1);
+}
+
+
+.services .txt b,
+.services .txt strong {
+    font-weight: 600;
+    color: var(--c2);
+}
+
+.services .txt p {
+    margin-bottom: 1rem;
 }
 
 .services h2 {
@@ -465,6 +505,67 @@ section.services {
     /* max-width: 30rem; */
     flex: 1;
     box-shadow: 0 2.5rem 1rem -2rem rgb(147 194 229 / 40%);
+    font-size: 1.4rem;
+}
+
+.services .tooltip {}
+
+.services .box .tooltip p {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    inset: 0;
+    top: 4rem;
+    background-color: var(--light-a);
+    padding: 1.5rem;
+    box-sizing: border-box;
+    height: fit-content;
+    margin: 0 2rem;
+    font-size: 0.95em;
+    border-radius: 0.6rem 0 0.6rem 0.6rem;
+    transition: opacity 0.3s 0.2s ease, visibility 0.3s 0.2s ease, transform 0.3s 0.2s ease;
+    transform: translateY(-0.5rem);
+    font-weight: 500;
+    color: var(--dark-a);
+    border: 0.1rem solid var(--c2-e);
+    box-shadow: 0 1.2rem 1rem -1rem var(--c2-e);
+}
+
+.services .box .tooltip p::before {
+    content:'';
+    position: absolute;
+    right: -0.1rem;
+    top: 0;
+    border-top: 0.5rem solid transparent;
+    border-right: 0.5rem solid var(--c2-e);
+    border-left: 0.5rem solid transparent;
+    border-bottom: 0.5rem solid var(--c2-e);
+    transform: translateY(-100%);
+}
+
+.services .box .tooltip button {
+    width: 1.6rem;
+    height: 1.6rem;
+    background-image: url(../assets/icons/tooltip.svg);
+    background-size: 18%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 1.3rem;
+    right: 1.3rem;
+    border: 0.1rem solid var(--c2-e);
+    /* padding: 0.8rem; */
+    box-sizing: border-box;
+    border-radius: 0.4rem;
+    background-color: var(--light);
+}
+
+.services .box .tooltip:hover p,
+.services .box .tooltip:focus p {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: opacity 0.1s ease, visibility 0.1s ease, transform 0.1s ease;
 }
 
 .services .box h3 {
@@ -481,13 +582,14 @@ section.services {
 }
 
 .services .box p {
-    font-size: clamp(1.5rem, 3.8vw, 1.6rem);
     color: var(--dark-a);
     font-weight: 500;
     line-height: 1.4;
+    margin-bottom: 1rem;
 }
 
-.services .box p b {
+.services .box p b,
+.services .box strong {
     color: var(--c2-b);
     font-weight: 600;
 }
@@ -557,7 +659,7 @@ section.about {
 }
 
 .about .base_width .ctnr {
-    width: clamp(10rem, 85vw, 59rem);
+    width: clamp(10rem, 85vw, 58rem);
     border-radius: 1.2rem;
     background-color: rgb(248 248 255 / 85%);
     /* max-height: 80vh; */
@@ -569,7 +671,6 @@ section.about {
     border: 0.2rem solid var(--light);
     /* box-shadow: 0 2rem 5rem -2.3rem var(--c1-c); */
     backdrop-filter: blur(0.6rem);
-    margin: 0 a;
 }
 
 .about .cta_ctnr {
@@ -591,14 +692,14 @@ section.about {
 }
 
 .about .base_width p {
-    font-size: clamp(1.3rem, 3.8vw, 1.7rem);
+    font-size: clamp(1.3rem, 3.8vw, 1.6rem);
     font-weight: 500;
     line-height: 1.5;
 }
 
 .about p strong,
 .about p b {
-    color: var(--c2-b);
+    color: var(--c2);
     font-weight: inherit;
 }
 
@@ -633,7 +734,7 @@ section.testimonials {
 }
 
 .testimonials .base_width .ctnr {
-    padding: clamp(6rem, 5vw, 6rem) 0;
+    padding: clamp(6rem, 17vw, 8rem) 0 clamp(4rem, 12vw, 5rem);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -647,19 +748,25 @@ section.testimonials {
     font-weight: 500;
     text-align: center;
     margin-bottom: 0.5rem;
+    position: relative;
 }
 
-.testimonials .stars {
+.testimonials h2::before {
+    content: '';
     background-image: url(../assets/icons/star.svg);
     width: clamp(1rem, 30vw, 11rem);
     height: calc(clamp(1rem, 30vw, 11rem) / 6);
     background-repeat: repeat-x;
     background-repeat: space;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: -2rem;
 }
 
 .testimonials .slider {
     display: flex;
-    align-items: center;
 }
 
 .testimonials .slider div {
@@ -695,7 +802,7 @@ section.testimonials {
 }
 
 .testimonials blockquote {
-    font-size: clamp(1.2rem, 3.6vw, 1.8rem);
+    font-size: clamp(1.2rem, 3.6vw, 1.7rem);
     margin: unset;
     font-weight: 300;
     line-height: 1.6;
@@ -704,7 +811,7 @@ section.testimonials {
 }
 
 .profile {
-    font-size: clamp(1.4rem, 5vw, 2rem);
+    font-size: clamp(1.4rem, 4vw, 2rem);
     display: flex;
     gap: clamp(2rem, 3vw, 4rem);
     align-items: center;
@@ -746,7 +853,7 @@ section.testimonials {
 
 .profile .name {
     display: block;
-    font-size: 1.8em;
+    font-size: 2.1em;
 }
 
 .profile .location {
@@ -755,8 +862,10 @@ section.testimonials {
     display: flex;
     align-items: center;
     gap: 0.4rem;
-} .profile .location::before {
-    content:'';
+}
+
+.profile .location::before {
+    content: '';
     background-image: url(../assets/icons/location.svg);
     width: 1.3rem;
     height: 1.3rem;
@@ -826,9 +935,10 @@ section.testimonials {
 
 section.contact {
     display: flex;
-    justify-content: center;
     background-color: var(--c1);
-    padding: clamp(6rem, 10vw, 10rem) 0 clamp(6rem, 10vw, 7rem);
+    padding: 0 0 clamp(6rem, 10vw, 7rem);
+    flex-direction: column;
+    align-items: center;
 }
 
 .contact .base_width {
@@ -886,13 +996,29 @@ section.contact {
 
 
 .contact form {
-    margin: 3rem auto;
+    margin: 0 auto 3rem;
     display: flex;
     flex-direction: column;
-    gap: clamp(2rem, 2vw, 4rem);
+    /* gap: clamp(2rem, 2vw, 4rem); */
     font-size: 1.4rem;
     justify-content: space-evenly;
     width: 91%;
+}
+
+.contact .vishyvka {
+    margin-bottom: clamp(6rem, 10vw, 7rem);
+    position: sticky;
+    top: clamp(5rem, calc(7vh + 7vw), 8rem);
+    z-index: 1;
+}
+
+.contact h2+.txt {
+    font-weight: 500;
+}
+
+.contact h2+.txt b,
+.contact h2+.txt strong {
+    font-weight: 600;
 }
 
 .contact input,
@@ -908,12 +1034,15 @@ section.contact {
 .contact button[type='submit'] {
     display: block;
     margin: 0 auto;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     background-color: var(--c2-b);
     color: var(--light);
     width: 100%;
-    padding: 1rem;
+    padding: 1.3rem;
     border-radius: 0.6rem;
+    margin-top: 2rem;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
 }
 
 .contact form>.flex {
@@ -935,7 +1064,7 @@ section.contact {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.3rem;
 }
 
 .contact form label {
@@ -1096,7 +1225,8 @@ section.contact {
         transform: translateX(calc((clamp(7rem, 25vw, 17rem) + clamp(2rem, 3vw, 4rem)) * -0.5));
     }
 
-    .testimonials .slider .box:active, .testimonials blockquote p:active {
+    .testimonials .slider .box:active,
+    .testimonials blockquote p:active {
         cursor: grabbing;
     }
 
@@ -1106,12 +1236,17 @@ section.contact {
         user-select: none;
     }
 
-    .testimonials blockquote p, .testimonials .slider .box {
+    .testimonials blockquote p,
+    .testimonials .slider .box {
         cursor: grab;
     }
 
     .testimonials .stars {
         margin-bottom: -2rem;
+    }
+
+    .testimonials .slider {
+        align-items: center;
     }
 }
 
