@@ -125,8 +125,9 @@ button:not([type="submit"]):focus-visible {
 textarea {
     min-width: 100%;
     max-width: 100%;
-    min-height: 4rem;
-    max-height: 20rem;
+    width: 100%;
+    min-height: 8rem;
+    max-height: 30rem;
 }
 
 
