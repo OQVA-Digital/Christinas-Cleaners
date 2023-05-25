@@ -1,230 +1,6 @@
 html {}
 
-.strip {
-    width: 100%;
-    background-color: var(--c2-a);
-    height: 3rem;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    z-index: 1;
-}
 
-.strip>.base_width {
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-}
-
-.strip .bg.icon {
-    background-size: 50%;
-    background-position: center;
-    height: 100%;
-    transition: background-color 0.4s ease;
-}
-
-.strip .bg.icon.tel {
-    margin-right: 1rem;
-}
-
-.strip .bg.icon:hover,
-.strip a:hover .icon {
-    background-color: var(--c2);
-    transition: background-color 0s ease;
-}
-
-.strip a,
-.strip a .icon {
-    min-width: 3rem;
-    height: 2rem;
-}
-
-.strip a span {
-    font-weight: 400;
-    font-size: clamp(1rem, 3.5vw, 1.2rem);
-    color: var(--light-a);
-    letter-spacing: 0.1rem;
-    line-height: 1;
-}
-
-.strip .flex {
-    /* gap:1rem; */
-    align-items: center;
-    height: 100%;
-}
-
-.strip .flex hr {
-    /* width: 0.2rem; */
-    height: 100%;
-    background-color: var(--c2-b);
-    border: unset;
-    border-left: 0.1rem solid var(--c2);
-}
-
-.bg.icon.tel {
-    background-image: url(../assets/icons/tel.svg);
-}
-
-.bg.icon.facebook {
-    background-image: url(../assets/icons/facebook.svg);
-}
-
-.bg.icon.instagram {
-    background-image: url(../assets/icons/instagram.svg);
-}
-
-.bg.icon.mail {
-    background-image: url(../assets/icons/mail.svg);
-}
-
-
-
-
-
-
-
-
-
-header {
-    width: 100%;
-    height: var(--header-height);
-    background-color: rgb(248 248 255 / 95%);
-    position: sticky;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 2;
-    backdrop-filter: blur(0.3rem);
-    /* border-bottom: 0.2rem solid var(--light-a); */
-    box-shadow: 0 2.5rem 1rem -2rem rgb(147 194 229 / 15%);
-}
-
-header>.base_width {
-    display: flex;
-    align-items: stretch;
-    justify-content: space-between;
-    flex: 1;
-}
-
-header .flex {
-    align-items: center;
-}
-
-header .logo_anchor {
-    height: 100%;
-    width: clamp(11rem, calc(12vh + 12vw), 17rem);
-    min-width: clamp(11rem, calc(12vh + 12vw), 17rem);
-}
-
-header .logo_anchor img {
-    height: 100%;
-}
-
-.nav_overflow {
-    overflow: hidden;
-    position: absolute;
-    right: 0;
-    bottom: 0.1rem;
-    width: 23rem;
-    height: 45rem;
-    transform: translateY(100%);
-    pointer-events: none;
-}
-
-header nav {
-    position: absolute;
-    right: 0;
-    background-color: var(--c2-a);
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    padding: 2rem 7rem 2rem 3rem;
-    color: var(--light);
-    border-radius: 0 0 0 1rem;
-    box-sizing: border-box;
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    transform: translateX(100%);
-    max-height: 70vh;
-    overflow: auto;
-    background-image: linear-gradient(170deg, #ffffff22, transparent 62%);
-    font-size: clamp(1.4rem, 5vw, 1.8rem);
-}
-
-header nav.show {
-    transform: translatex(0%);
-}
-
-header nav a {
-    padding: 1.3rem 0.2rem;
-    position: relative;
-}
-
-header nav a:not(:last-child)::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 0.1rem;
-    width: 20%;
-    background-color: var(--c2-c);
-}
-
-header .cta {
-    background-color: var(--c1);
-    font-weight: 700;
-    color: var(--c2);
-    white-space: nowrap;
-}
-
-.cta {
-    border-radius: 0.6rem;
-    font-size: clamp(1.2rem, 4.2vw, 1.6rem);
-    padding: clamp(1rem, 3.5vw, 1.5rem) clamp(0.9rem, 5vw, 3rem);
-    height: fit-content;
-    line-height: 1;
-    width: fit-content;
-    outline-offset: -0.3rem;
-    /* outline: 0.1rem solid #f8f8ff44; */
-    text-align: center;
-    background-image: linear-gradient(170deg, #ffffff66, transparent 62%);
-    transition: filter 0.3s ease;
-    letter-spacing: 0.03rem;
-}
-
-.cta:hover {
-    filter: brightness(1.1)
-}
-
-.hambt {
-    position: absolute;
-    right: 0;
-    width: clamp(1.3rem, 5vw, 3.5rem);
-    height: clamp(2.5rem, 7vw, 3.5rem);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;
-}
-
-.hambt div {
-    height: 20%;
-    width: 100%;
-    background-color: var(--c2);
-    border-radius: 0.2rem 0 0 0.2rem;
-}
-
-
-.vishyvka {
-    width: 100%;
-    height: 2.5rem;
-    background-image: url(../assets/vyshyvka.svg);
-    background-position: center;
-    background-size: auto;
-    background-repeat: repeat no-repeat;
-    background-color: var(--light);
-}
 
 .jobs {
     color: var(--c2-e);
@@ -346,27 +122,12 @@ h1 strong {
     color: var(--c2);
 }
 
-.cta_ctnr {
-    display: flex;
-    align-items: center;
-    gap: clamp(1.5rem, 2vw, 2.1rem);
-    font-weight: 600;
-}
-
 .intro .cta_ctnr .cta {
     /* background-color: var(--light); */
     color: var(--c2);
     border: 0.2rem solid var(--light);
     box-shadow: -0.35rem 0.35rem var(--c1), -0.7rem 0.7rem #fff8;
     background-color: var(--c1);
-}
-
-.cta_ctnr a:not(.cta) {
-    font-size: 1.6rem;
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
 }
 
 .intro .cta_ctnr a:not(.cta)::after {
@@ -631,21 +392,33 @@ h2+.txt {
 }
 
 .services .price .discount span {
-color: var(--c3);
-font-weight: 600;
-font-size: 0.8em;
+
+color: var(--c3);
+
+font-weight: 600;
+
+font-size: 0.8em;
 }
 
 .services .price .final_price {
-font-size: 3.3rem;
-background-image: linear-gradient(-170deg, #ffffff66, transparent 62%);
-border: 0.2rem solid var(--c3);
-background-color: var(--c3);
-padding: 0.5rem 1.1rem;
-border-radius: 0.7rem;
-align-items: center;
-gap: 0.4rem;
-box-shadow: -0.6rem 0.8rem 0.6rem -0.6rem var(--c2-e);
+
+font-size: 3.3rem;
+
+background-image: linear-gradient(-170deg, #ffffff66, transparent 62%);
+
+border: 0.2rem solid var(--c3);
+
+background-color: var(--c3);
+
+padding: 0.5rem 1.1rem;
+
+border-radius: 0.7rem;
+
+align-items: center;
+
+gap: 0.4rem;
+
+box-shadow: -0.6rem 0.8rem 0.6rem -0.6rem var(--c2-e);
 }
 
 .services .price del {
@@ -1348,25 +1121,6 @@ section.contact {
 
 @media (min-width:800px) {
 
-    header>.base_width {
-        gap: 2rem;
-    }
-
-    header .flex {
-        gap: clamp(1rem, calc(4vw - 4rem), 3rem);
-        justify-content: space-between;
-        width: 50vw;
-    }
-
-    .hambt {
-        position: relative;
-        right: unset;
-    }
-
-    .hambt div {
-        border-radius: 0.2rem;
-    }
-
     section.intro {
         padding-bottom: 2rem;
     }
@@ -1465,17 +1219,6 @@ section.contact {
 
 @media (min-width: 1080px) {
 
-
-    header .flex {
-        flex-direction: row-reverse;
-        width: unset;
-    }
-
-    .hambt,
-    header nav .jobs {
-        display: none;
-    }
-
     .strip .jobs {
         font-size: clamp(1rem, 0.8vw, 1.4rem);
         position: absolute;
@@ -1487,62 +1230,9 @@ section.contact {
         align-items: center;
     }
 
-    .nav_overflow {
-        position: relative;
-        bottom: unset;
-        width: unset;
-        height: 100%;
-        transform: unset;
-        right: unset;
-        pointer-events: unset;
-    }
-
-    header nav {
-        position: relative;
-        transform: unset;
-        background-color: unset;
-        color: var(--c2);
-        flex-direction: row;
-        font-weight: 500;
-        overflow: unset;
-        padding: unset;
-        gap: clamp(0rem, calc(3vw - 4rem), 0.6rem);
-        height: 100%;
-        align-items: center;
-        /* width: clamp(5rem, calc(98vw - 50rem), 82rem); */
-        width: unset;
-        right: unset;
-        top: unset;
-        white-space: nowrap;
-        display: inline-flex;
-        background-image: unset;
-    }
-
-    header nav a {
-        font-size: clamp(1.4rem, 1.4vw, 1.7rem);
-        padding: 1rem clamp(0.4rem, calc(4vw - 3.7rem), 1.8rem);
-        transition: background-color 0.3s ease;
-        background-color: transparent;
-        display: inline-block;
-        align-items: center;
-        border-radius: 0.3rem;
-        white-space: nowrap;
-    }
-
-    header nav a:hover {
-        background-color: white;
-        transition: background-color 0s ease;
-    }
-
-    header nav a:not(:last-child)::after {
-        display: none;
-    }
-
     .offer_sticker {
-
         border-radius: 0 0 0 0.8rem;
     }
-
 
     .services .ctnr {
         max-width: unset;
