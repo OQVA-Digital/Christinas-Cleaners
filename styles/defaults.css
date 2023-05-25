@@ -244,7 +244,7 @@ header {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    z-index: 2;
+    z-index: 3;
     backdrop-filter: blur(0.3rem);
     /* border-bottom: 0.2rem solid var(--light-a); */
     box-shadow: 0 2.5rem 1rem -2rem rgb(147 194 229 / 15%);
