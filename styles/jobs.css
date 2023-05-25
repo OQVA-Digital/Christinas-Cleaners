@@ -14,8 +14,17 @@ main .base_width {
     width: clamp(24rem, 84vw, 81rem);
 }
 
+.hambt {
+    position: relative;
+    width: clamp(2.5rem, 7vw, 3.5rem);
+}
+
+.hambt div {
+    border-radius: 0.2rem;
+}
+
 h1 {
-    font-size: clamp(2.5rem, 9vw, 6.2rem);
+    font-size: clamp(2.5rem, 7.8vw, 6.2rem);
     line-height: 1.15;
     margin: 0 0 1.5rem;
     color: var(--c2-c);
@@ -56,7 +65,7 @@ h1 span {
 h2 {
     font-weight: 600;
     font-size: clamp(2.5rem, 7vw, 4rem);
-    margin: clamp(3rem, 8vw, 5rem) 0 1rem;
+    margin: clamp(3rem, 8vw, 4rem) 0 1rem;
 }
 
 .content {
@@ -91,7 +100,7 @@ li::marker {
 
 .intro {
     /* text-align: center; */
-    margin: 0 0 clamp(1rem, 4vw, 4rem);
+    margin: 0 0 clamp(1rem, 4vw, 3rem);
 }
 
 .intro nav {
@@ -106,21 +115,24 @@ li::marker {
     padding: 1rem 0;
 }
 
-.intro nav a:not(.current):hover {
+.intro nav a:not(.current) {
     text-decoration: underline;
+    text-underline-offset: 0.4rem;
+}
+
+.intro nav a:not(.current):hover {
+    text-decoration-color: var(--c1);
 }
 
 .intro nav a.current {
-    color: var(--c1);
-    text-decoration: underline;
-    text-underline-offset: 0.2rem;
+    color: var(--c2-e);
 }
 
 .cta_ctnr {
     position: sticky;
     bottom: 0;
     background-color: var(--c2-d);
-    padding: 1rem 0 1rem;
+    padding: 0 0 2rem;
 }
 
 .cta_ctnr p {
@@ -143,9 +155,8 @@ li::marker {
     font-weight: 500;
     /* position: sticky; */
     /* bottom: 2rem; */
-    padding: clamp(1rem, 3.5vw, 1.5rem) clamp(0.9rem, 9vw, 4rem);
     /* box-shadow: 0 1rem 1rem 1rem var(--c2-d); */
-    white-space: nowrap;
+    /* white-space: nowrap; */
 }
 
 .content sub {
