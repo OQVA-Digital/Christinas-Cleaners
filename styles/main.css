@@ -585,7 +585,7 @@ h2+.txt {
 }
 
 .services .box.highlight {
-    border: 0.3rem solid var(--c2-b);
+    border: 0.2rem solid var(--c2-c);
 }
 
 .services .box .tooltip button:hover {
