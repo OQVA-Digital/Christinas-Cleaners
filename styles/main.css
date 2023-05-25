@@ -92,7 +92,9 @@ header {
     position: sticky;
     top: 0;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     z-index: 2;
     backdrop-filter: blur(0.3rem);
     /* border-bottom: 0.2rem solid var(--light-a); */
@@ -103,6 +105,7 @@ header>.base_width {
     display: flex;
     align-items: stretch;
     justify-content: space-between;
+    flex: 1;
 }
 
 header .flex {
@@ -253,7 +256,6 @@ header .cta {
     font-weight: 500;
     border-radius: 0.0 0 0 0.8rem;
     display: flex;
-    /* flex-direction: column; */
     gap: 1rem;
     line-height: 1.05;
     align-items: center;
@@ -262,7 +264,6 @@ header .cta {
     margin: 0 0 0 auto;
     box-shadow: 0rem 0.3rem 0rem var(--c1-c);
     transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.4s cubic-bezier(0, 0, 0.2, 1);
-    z-index: 3;
     transform: translateY(99%) scale(0.4);
     transform-origin: top right;
 }
@@ -356,7 +357,7 @@ h1 strong {
     /* background-color: var(--light); */
     color: var(--c2);
     border: 0.2rem solid var(--light);
-    box-shadow: -0.3rem 0.3rem var(--c1), -0.7rem 0.7rem #fff8;
+    box-shadow: -0.35rem 0.35rem var(--c1), -0.7rem 0.7rem #fff8;
     background-color: var(--c1);
 }
 
@@ -429,7 +430,7 @@ h1 strong {
 
 .fold_bt {
     position: fixed;
-    bottom: clamp(3rem, 5vw, 4rem);
+    bottom: clamp(3rem, calc(20vw - 5rem), 6rem);
     z-index: 2;
     width: clamp(3.5rem, 10vw, 4rem);
     height: clamp(3.5rem, 10vw, 4rem);
@@ -1462,7 +1463,7 @@ section.contact {
 
 
 
-@media (min-width:1080px) {
+@media (min-width: 1080px) {
 
 
     header .flex {
