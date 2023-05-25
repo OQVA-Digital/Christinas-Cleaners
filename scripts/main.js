@@ -31,6 +31,55 @@ introVideo.addEventListener('loadeddata', function() {
 
 
 
+
+let scroll;
+scroll = window.scrollY;
+
+
+// Fold bt + Offer sticker
+
+let showingFoldBt = true;
+const foldBt = document.querySelector('.fold_bt')
+
+let showingOfferSticker = false;
+const offerSticker = document.querySelector('.offer_sticker')
+
+window.addEventListener("scroll", function(e){
+  scroll = window.scrollY;
+
+  // if(showingFoldBt == true) {
+  //     if(scroll > 100) {
+  //       foldBt.classList.add('hide')
+  //       showingFoldBt = false;
+  //     }
+  // } else if(scroll < 100) {
+  //   foldBt.classList.remove('hide')
+  //   showingFoldBt = true;
+  // }
+
+  
+  if(scroll > 100) {
+    foldBt.classList.add('hide')
+    showingFoldBt = false;
+  } else {
+    foldBt.classList.remove('hide')
+    showingFoldBt = true;
+  }
+
+});
+
+setTimeout(() => {
+  offerSticker.classList.add('show')
+}, 900);
+
+
+
+
+
+
+
+
+
 // TOGGLE NAV
 
 const menuBt = document.querySelector('.hambt')
@@ -138,3 +187,13 @@ var slider = tns({
   });
 
 // fixedWidth: window.innerWidth * 0.8,
+
+
+
+
+
+
+
+
+
+

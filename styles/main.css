@@ -120,22 +120,14 @@ header .logo_anchor img {
 }
 
 .nav_overflow {
-
-overflow: hidden;
-
-position: absolute;
-
-right: 0;
-
-bottom: 0.1rem;
-
-width: 23rem;
-
-height: 40rem;
-
-transform: translateY(100%);
-
-pointer-events: none;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    bottom: 0.1rem;
+    width: 23rem;
+    height: 45rem;
+    transform: translateY(100%);
+    pointer-events: none;
 }
 
 header nav {
@@ -154,6 +146,7 @@ header nav {
     max-height: 70vh;
     overflow: auto;
     background-image: linear-gradient(170deg, #ffffff22, transparent 62%);
+    font-size: clamp(1.4rem, 5vw, 1.8rem);
 }
 
 header nav.show {
@@ -163,7 +156,6 @@ header nav.show {
 header nav a {
     padding: 1.3rem 0.2rem;
     position: relative;
-    font-size: clamp(1.4rem, 5vw, 1.8rem);
 }
 
 header nav a:not(:last-child)::after {
@@ -185,8 +177,8 @@ header .cta {
 
 .cta {
     border-radius: 0.6rem;
-    font-size: clamp(1.2rem, 5vw, 1.6rem);
-    padding: clamp(1rem, 3vw, 1.5rem) clamp(0.9rem, 5vw, 3rem);
+    font-size: clamp(1.2rem, 4.2vw, 1.6rem);
+    padding: clamp(1rem, 3.5vw, 1.5rem) clamp(0.9rem, 5vw, 3rem);
     height: fit-content;
     line-height: 1;
     width: fit-content;
@@ -195,6 +187,7 @@ header .cta {
     text-align: center;
     background-image: linear-gradient(170deg, #ffffff66, transparent 62%);
     transition: filter 0.3s ease;
+    letter-spacing: 0.03rem;
 }
 
 .cta:hover {
@@ -230,6 +223,72 @@ header .cta {
     background-color: var(--light);
 }
 
+.jobs {
+    color: var(--c2-e);
+    font-size: 0.9em;
+}
+
+.jobs:hover {
+    color: var(--light-a)
+}
+
+.strip .jobs {
+    display: none;
+}
+
+
+.offer_sticker {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    margin: 0 auto;
+    background-color: var(--c3);
+    color: var(--light);
+    padding: clamp(0.2rem, 1.4vw, 0.9rem) clamp(1rem, 3vw, 3rem) clamp(0.2rem, 1.4vw, 0.9rem) clamp(1.2rem, 3.5vw, 2rem);
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    width: clamp(13rem, 66vw, 33rem);
+    font-weight: 500;
+    border-radius: 0.0 0 0 0.8rem;
+    display: flex;
+    /* flex-direction: column; */
+    gap: 1rem;
+    line-height: 1.05;
+    align-items: center;
+    background-image: linear-gradient(-170deg, #ffffff66, transparent 62%);
+    letter-spacing: 0.05rem;
+    margin: 0 0 0 auto;
+    box-shadow: 0rem 0.3rem 0rem var(--c1-c);
+    transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.4s cubic-bezier(0, 0, 0.2, 1);
+    z-index: 3;
+    transform: translateY(99%) scale(0.4);
+    transform-origin: top right;
+}
+
+.offer_sticker.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(99%) scale(1);
+}
+
+.offer_sticker span {
+    display: block;
+    font-size: 2.4em;
+    font-weight: 700;
+    color: var(--c1);
+    white-space: nowrap;
+}
+
+.offer_sticker b {
+    font-weight: inherit;
+    color: var(--c1-c);
+}
+
+
+
+
 
 
 
@@ -254,7 +313,7 @@ section.intro {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: clamp(3rem, 5vw, 6rem) 0 clamp(3rem, 5vw, 5rem) 0;
+    padding: clamp(3rem, 9vw, 6rem) 0 clamp(3rem, 5vw, 5rem) 0;
     position: relative;
 }
 
@@ -350,6 +409,9 @@ h1 strong {
     z-index: 1;
     clip-path: inset(1px 1px);
     position: sticky;
+    background-image: url(../assets/video/hero-poster.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 .intro .bottom_wave {
@@ -365,13 +427,36 @@ h1 strong {
     box-shadow: 0 -0.3rem var(--c1);
 }
 
-/* .intro .flag {
-    position: absolute;
-    width: clamp(8rem, 25vw, 14rem);
-    bottom: 7rem;
-    right: -0.7rem;
-    z-index: 1;
-} */
+.fold_bt {
+    position: fixed;
+    bottom: clamp(3rem, 5vw, 4rem);
+    z-index: 2;
+    width: clamp(3.5rem, 10vw, 4rem);
+    height: clamp(3.5rem, 10vw, 4rem);
+    background-color: var(--light);
+    color: var(--c2-b);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease, background-color 0.3s ease;
+    border: 0.2rem solid rgb(0 146 255 / 10%);
+}
+
+.fold_bt:hover {
+    background-color: var(--light-a);
+    transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease, background-color 0.1s ease;
+}
+
+.fold_bt.hide {
+    transform: translateY(1rem);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.fold_bt svg {
+    width: 50%;
+}
 
 
 
@@ -397,7 +482,7 @@ section.services {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: clamp(14rem, 55vw, 23rem) 0 clamp(9rem, 10vw, 13rem);
+    padding: clamp(14rem, 65vw, 27rem) 0 clamp(9rem, 10vw, 13rem);
     position: relative;
     scroll-margin: calc(clamp(14rem, 55vw, 23rem) * -0.5);
 }
@@ -499,7 +584,7 @@ h2+.txt {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.6rem;
+    gap: 1.8rem;
     border-radius: 1.6rem;
     min-width: clamp(15rem, calc(33vh + 20vw), 32rem);
     max-width: clamp(15rem, calc(33vh + 20vw), 32rem);
@@ -513,18 +598,66 @@ h2+.txt {
 
 .services .box .price {
     font-size: clamp(2.2rem, 6vmin, 2.7rem);
-    color: var(--c2-b);
-    display: block;
-    text-align: right;
+    color: var(--light);
+    display: flex;
+    /* flex-direction: column; */
+    gap: 0.6rem;
     font-weight: 600;
     line-height: 1.1;
+    width: fit-content;
+    margin: clamp(0.5rem, 2vw, 2rem) 0 0 auto;
+    /* background-color: var(--c3); */
+    /* padding: 0.6rem 1.1rem; */
+    /* border-radius: 1.1rem; */
+    position: relative;
+    right: -4rem;
+    /* background-image: linear-gradient(-170deg, #ffffff66, transparent 62%); */
+    /* border: 0.2rem solid var(--c3); */
+    /* width: 100%; */
+    box-sizing: border-box;
+}
+
+.services .box .price .flex {
+    line-height: 1;
+}
+
+.services .price .discount {
+    font-size: 0.6em;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    gap: 0.2rem;
+}
+
+.services .price .discount span {
+color: var(--c3);
+font-weight: 600;
+font-size: 0.8em;
+}
+
+.services .price .final_price {
+font-size: 3.3rem;
+background-image: linear-gradient(-170deg, #ffffff66, transparent 62%);
+border: 0.2rem solid var(--c3);
+background-color: var(--c3);
+padding: 0.5rem 1.1rem;
+border-radius: 0.7rem;
+align-items: center;
+gap: 0.4rem;
+box-shadow: -0.6rem 0.8rem 0.6rem -0.6rem var(--c2-e);
+}
+
+.services .price del {
+    font-weight: 500;
+    color: var(--dark);
+    font-size: 1.3em;
 }
 
 .services .box .price sub {
     display: block;
     font-weight: 500;
     font-size: clamp(1.4rem, 3.5vw, 1.5rem);
-    color: var(--c2-c);
+    /* color: var(--c2-c); */
 }
 
 .services .tooltip {}
@@ -632,7 +765,7 @@ h2+.txt {
     width: 100%;
     text-align: center;
     background-color: var(--c2-b);
-    font-weight: 500;
+    font-weight: 600;
     color: var(--c1);
     box-sizing: border-box;
 }
@@ -677,6 +810,9 @@ section.about {
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
     padding: clamp(7rem, 18vmax, 14rem) 0 0;
     background-color: var(--c2-e);
+    background-image: url(../assets/video/group-poster.jpg);
+    background-position: center;
+    background-size: cover;
 }
 
 .about video {
@@ -749,10 +885,10 @@ section.about {
 
 .about .cta_ctnr a:not(.cta) {
     font-size: clamp(1.4rem, 2vw, 1.5rem);
-    color: var(--dark-a);
+    color: var(--c2-a);
     letter-spacing: 0.06rem;
     flex: 1;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 
@@ -1212,9 +1348,7 @@ section.contact {
 @media (min-width:800px) {
 
     header>.base_width {
-
         gap: 2rem;
-
     }
 
     header .flex {
@@ -1232,16 +1366,9 @@ section.contact {
         border-radius: 0.2rem;
     }
 
-
     section.intro {
         padding-bottom: 2rem;
     }
-
-    /* .intro .flag {
-        top: -4rem;
-        bottom: unset;
-        right: 1rem;
-    } */
 
     .intro video {
         width: clamp(30rem, 41vw, 58rem);
@@ -1343,8 +1470,20 @@ section.contact {
         width: unset;
     }
 
-    .hambt {
+    .hambt,
+    header nav .jobs {
         display: none;
+    }
+
+    .strip .jobs {
+        font-size: clamp(1rem, 0.8vw, 1.4rem);
+        position: absolute;
+        right: 1vw;
+        font-weight: 400;
+        line-height: 1.4;
+        height: 100%;
+        display: flex;
+        align-items: center;
     }
 
     .nav_overflow {
@@ -1396,6 +1535,11 @@ section.contact {
 
     header nav a:not(:last-child)::after {
         display: none;
+    }
+
+    .offer_sticker {
+
+        border-radius: 0 0 0 0.8rem;
     }
 
 

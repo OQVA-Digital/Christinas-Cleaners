@@ -17,7 +17,7 @@
     --c2-d:#001b38;
     --c2-e:#93c2e5;
 
-    --base-width: clamp(24rem, 84vw, 150rem);
+    --c3: #ff4400;--base-width: clamp(24rem, 84vw, 150rem);
     --header-height: clamp(5rem, calc(7vh + 7vw), 8rem);
 }
 
