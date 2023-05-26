@@ -8,7 +8,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: clamp(3rem, 5vw, 6rem) 0;
+    padding: clamp(3rem, 5vw, 6rem) 0 clamp(3rem, 15vw, 8rem) 0;
 }
 
 main .width {
@@ -35,7 +35,7 @@ h1 {
 }
 
 .intro p svg {
-    width: clamp(2rem, 7vw, 3rem);
+    width: clamp(2rem, 6vw, 3rem);
     display: block;
     /* display: none; */
     color: var(--c2-c);
@@ -90,6 +90,11 @@ li::marker {
     line-height: 1.5;
 }
 
+.content p strong {
+    font-weight: inherit;
+    color: var(--c2-c);
+}
+
 .content li p b {
     text-decoration: underline;
     text-underline-offset: 0.4rem;
@@ -134,7 +139,8 @@ li::marker {
     position: sticky;
     bottom: 0;
     background-color: var(--c2-d);
-    padding: 1rem 0 2rem;
+    padding: 2rem 0;
+    border-top: 0.1rem solid var(--dark-a);
 }
 
 .cta_ctnr p {
@@ -158,7 +164,7 @@ li::marker {
     /* box-shadow: 0 1rem 1rem 1rem var(--c2-d); */
     /* white-space: nowrap; */
     color: var(--light);
-    padding: clamp(1rem, 3.5vw, 1.5rem) clamp(0.9rem, 3vw, 3rem);
+    padding: clamp(1rem, 3.5vw, 1.5rem) clamp(0.9rem, 4vw, 3rem);
 }
 
 .content sub {
@@ -193,19 +199,29 @@ li::marker {
     top: 50%;
     left: 0;
     right: 0;
-    padding: 3rem 2rem 1rem;
+    padding: 3rem 2rem 2rem;
     box-sizing: border-box;
-    border-radius: 2rem;
+    border-radius: 1.2rem;
+    width: clamp(24rem, 84vw, 76rem);
+    scroll-margin: var(--header-height);
 }
 
-.contact_ctnr .width {
-    width: clamp(24rem, 84vw, 61rem);
-}
+.contact_ctnr .width {width: clamp(24rem, 72vw, 65rem);}
 
 .contact_ctnr form {
     gap: 1.5rem;
 }
 
+.contact_ctnr .divider {
+    color: var(--c2-c);
+    font-weight: 600;
+    margin-top: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 1.3rem;
+}
+
+.contact_ctnr .divider hr {border: unset;border-bottom: 0.1rem solid var(--c2-b);margin: 0.4rem 0;}
 
 
 
