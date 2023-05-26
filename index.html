@@ -22,24 +22,14 @@
 
     <script src="scripts/main.js" defer></script>
     <script src="scripts/menu.js" defer></script>
+    <script src="scripts/form.js" defer></script>
 
     
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
 <!--[if (lt IE 9)]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.helper.ie8.js"></script><![endif]-->
-    <script src="scripts/tiny-slider.js"></script>
-    <!-- NOTE: prior to v2.2.1 tiny-slider.js need to be in <body> -->
 
-    <!--
-        OPENGRAPH PROTOCOL
-        og:title and og:description tags are being omitted for social platforms interpretation!
-    -->
-    <!-- <meta property="og:site_name" content=""/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:url" content=""/>
-    <meta property="og:image" content=""/>
-    <meta property="og:image:width" content="1200"/>
-    <meta property="og:image:height" content="630"/> -->
+    <script src="scripts/tiny-slider.js"></script>
 </head>
 <body>
     <div class="strip">
@@ -326,48 +316,52 @@
                         <div class="txt"><strong>Christina's Cleaners operates across Oxford and its surrounding villages</strong>, including Headington, Cowley, Marston, Botley, and many more.</div>
                         
                         <div class="content">
-                            <div>
+                            <div class="form_step about_you current">
                                 <p>
                                     <label>Your Name: <input type="text" name="name" required/>
                                     </label>
                                 </p>
-
+    
                                 <p>
                                     <label>Surname: <input type="text" name="surname" required/>
                                     </label>
                                 </p>
-
+    
                                 <p>
                                     <label>Email: <input type="email" name="email" required/></label>
                                 </p>
-
+    
                                 <p>
                                     <label for="phone">Contact Number:
                                         <input type="tel" id="phone" name="phone" required>
                                     </label>
                                 </p>
-
+    
                                 <p>
                                     <label for="contactPreference">Preferred method of contact:
                                         <select id="contactPreference" name="contactPreference" required>
-                                          <option value="Email">Email</option>
-                                          <option value="Phone">Phone</option>
+                                            <option disabled selected value="">--- Select ---</option>
+
+                                            <option value="Email">Email</option>
+                                            <option value="Phone">Phone</option>
                                         </select>
                                     </label>
                                 </p>
+                            </div>
 
+                            <div class="form_step about_property">
                                 <p>
                                     <label for="streetAddress">Street Address:
                                         <input type="text" id="streetAddress" name="streetAddress" required>
                                     </label>
                                 </p>
-
+    
                                 <p>
                                     <label for="postcode">Postcode:
                                         <input type="text" id="postcode" name="postcode" required>
                                     </label>
                                 </p>
-
+    
                                 <p>
                                     <label for="city">City:
                                         <input type="text" id="city" name="city" required>
@@ -379,60 +373,70 @@
                                         <textarea id="specialInstruction" name="specialInstruction"></textarea>
                                     </label>
                                 </p>
+                            </div>
+
+                            <div class="form_step about_clean">
 
                                 <p>
                                     <label for="cleaningService">Type of Cleaning Service required:
                                         <select id="cleaningService" name="cleaningService" required>
+                                            <option disabled selected value="">--- Select ---</option>
+
                                             <option value="Regular Domestic Cleaning">Basic Clean</option>
                                             <option value="Subscription-based Regular Cleaning">Deep Clean</option>
                                             <option value="Specialised Cleaning Services">End of Tenancy Clean</option>
                                         </select>
                                     </label>
                                 </p>
-
+    
                                 <p>
                                     <label for="bedrooms">Number of Bedrooms:
                                         <input type="number" id="bedrooms" name="bedrooms" required>
                                     </label>
                                 </p>
-
+    
                                 <p>
                                     <label for="bathrooms">Number of Bathrooms:
                                         <input type="number" id="bathrooms" name="bathrooms" required>
                                     </label>
                                 </p>
-                            </div>
-
-
-
-                            <div>
+    
                                 <p>
                                     <label for="otherRooms">Other rooms requiring cleaning (Please specify):
                                         <textarea id="otherRooms" name="otherRooms"></textarea>
                                     </label>
                                 </p>
-
+    
                                 <p>
                                     <label for="extraAttention">Are there any specific areas needing extra attention or services required beyond the standard cleaning package?
                                         <textarea id="extraAttention" name="extraAttention"></textarea>
                                     </label>
                                 </p>
-
+    
                                 <p>
                                     <label for="cleaningDate">Preferred Start Date:
-                                        <input type="date" id="cleaningDate" name="cleaningDate" required>
+                                        <input type="date" id="cleaningDate" name="cleaningDate">
                                     </label>
-                                </p>
 
+                                    <script>
+                                    document.getElementById("cleaningDate").min = new Date().toISOString().split("T")[0];
+
+                                    document.getElementById("cleaningDate").min = new Date().toISOString().split("T")[0];
+                                    </script>
+                                </p>
+    
                                 <p>
                                     <label for="cleaningTime">Preferred Start Time:
-                                        <input type="time" id="cleaningTime" name="cleaningTime" required>
+                                        <input type="time" id="cleaningTime" name="cleaningTime" min="08:00" max="20:00" required>
+                                        <sub>From 08:00 to 20:00</sub>
                                     </label>
                                 </p>
-
+    
                                 <p>
                                     <label for="frequency">Frequency of Cleaning:
                                         <select id="frequency" name="frequency" required>
+                                            <option disabled selected value="">--- Select ---</option>
+
                                             <option value="One-time">One-time</option>
                                             <option value="Weekly">Weekly</option>
                                             <option value="Bi-weekly">Bi-weekly</option>
@@ -440,22 +444,27 @@
                                         </select>
                                     </label>
                                 </p>
-
+    
                                 <p>
                                     <label for="instructions">Are there any specific cleaning instructions or special requests?
                                         <textarea id="instructions" name="instructions"></textarea>
                                     </label>
                                 </p>
-
+    
                                 <p>
                                     <label for="pets">Are there any pets in the house? If yes, please specify.
-                                        <textarea id="pets" name="pets"></textarea>
+                                        <textarea id="pets" name="pets" required></textarea>
                                     </label>
                                 </p>
+                            </div>
+
+                            <div class="form_step payment">
 
                                 <p>
                                     <label for="payment">Preferred Method of Payment:
                                         <select id="payment" name="payment" required>
+                                            <option disabled selected value="">--- Select ---</option>
+
                                             <option value="Credit Card">Credit Card</option>
                                             <option value="Debit Card">Debit Card</option>
                                             <option value="Bank Transfer">Bank Transfer</option>

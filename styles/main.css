@@ -1043,7 +1043,11 @@ section.contact {
 }
 
 
+/* .contact form .form_step {
 
+} .contact form .form_step:not(.current) {
+    display: none;
+} */
 
 
 

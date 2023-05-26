@@ -15,8 +15,8 @@
     
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
 
-
     <script src="../scripts/menu.js" defer></script>
+    <script src="../scripts/form.js" defer></script>
 </head>
 <body>
     <div class="strip">
@@ -146,12 +146,107 @@
                 <p><b>Готові розпочати свою кар'єру в Christina's Cleaners?</b></p>
 
                 <div class="cta_ctnr">
-                    <button type="button" class="cta apply">Заявка на роботу зараз</button>
+                    <a href="#apply" type="button" class="cta apply">Заявка на роботу зараз</a>
 
                     <!-- <p>Робимо прибирання з метою разом.</p> -->
                 </div>
             </div>
             
+        </div>
+
+        <div class="contact_ctnr" id="apply">
+            <div class="width">
+                <form name="job-application-ukrainian" method="POST" data-netlify="true">
+                    <span class="divider">
+                        Контактна інформація:
+                        <hr>
+                    </span>
+                    
+                    <p>
+                      <label>Ім'я: <input type="text" name="name" required/></label>
+                    </p>
+                    <p>
+                      <label>Прізвище: <input type="text" name="name" required/></label>
+                    </p>
+        
+                    <p>
+                      <label>Електронна пошта: <input type="email" name="email" required/></label>
+                    </p>
+        
+                    <p>
+                      <label>Номер телефону: <input type="tel" name="phone" required/></label>
+                    </p>
+
+                    <span class="divider">
+                        Місцезнаходження
+                        <hr>
+                    </span>
+        
+                    <p>
+                      <label>Готові ви подорожувати до роботи в межах Оксфордського центру міста та навколишніх сіл? <input type="text" name="able-to-travel" required/></label>
+                    </p>
+
+                    <span class="divider">
+                        Наявність
+                        <hr>
+                    </span>
+        
+                    <p>
+                      <label>В які дні тижня ви доступні для роботи? <input type="text" name="days-available" required/></label>
+                    </p>
+        
+                    <p>
+                      <label>Скільки годин на тиждень ви доступні для роботи? <input type="text" name="hours-per-week" required/></label>
+                    </p>
+        
+                    <p>
+                      <label>Чи доступні ви для аварійних послуг з прибирання в той же день? <input type="text" name="same-day-cleaning-availability" required/></label>
+                    </p>
+
+                    <span class="divider">
+                        Досвід
+                        <hr>
+                    </span>
+        
+                    <p>
+                      <label>Скільки років у вас є досвіду у прибиранні? <input type="text" name="years-of-experience" required/></label>
+                    </p>
+        
+                    <p>
+                      <label>Чи працювали ви раніше у компанії по прибиранню? <input type="text" name="have-worked-for-cleaning-companies-before" required/></label>
+                    </p>
+        
+                    <p>
+                      <label>В яких типах послуг з прибирання ви найбільше досвідчені (наприклад, регулярне прибирання в приватних будинках, глибоке прибирання, прибирання після закінчення оренди)? <input type="text" name="types-of-cleaning-more-experienced" required/></label>
+                    </p>
+
+                    <span class="divider">
+                        Придатність
+                        <hr>
+                    </span>
+        
+                    <p>
+                      <label>Чи маєте ви законне право на роботу в Великій Британії? <input type="text" name="legal-right-to-be-in-uk" required/></label>
+                    </p>
+
+                    <span class="divider">
+                        Інші навички та кваліфікації
+                        <hr>
+                    </span>
+        
+                    <p>
+                      <label>Чи є у вас особливі навички, кваліфікація або сертифікати, які були б корисними в цій ролі (наприклад, водійські права, сертифікати з прибирання, тренінги з надання першої допомоги)? <input type="text" name="special-skills-and-qualifications" required/></label>
+                    </p>
+        
+                    <p>
+                      <label>Чи є щось ще, про що ви хотіли б нам повідомити щодо вашої придатності для цієї ролі? <input type="text" name="additional-information" required/></label>
+                    </p>
+        
+                    <p>
+                      <button class="cta" type="submit">Застосувати</button>
+                    </p>
+                </form>
+            </div>
         </div>
     </main>
 

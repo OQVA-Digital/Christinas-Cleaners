@@ -26,7 +26,7 @@ main .width {
 }
 
 h1 {
-    font-size: clamp(2.5rem, 7.8vw, 6.2rem);
+    font-size: clamp(2.5rem, 9vw, 6.2rem);
     line-height: 1.15;
     margin: 0 0 1.5rem;
     color: var(--c2-c);
@@ -199,7 +199,7 @@ li::marker {
     top: 50%;
     left: 0;
     right: 0;
-    padding: 3rem 2rem 2rem;
+    padding: 3rem 2rem 3rem;
     box-sizing: border-box;
     border-radius: 1.2rem;
     width: clamp(24rem, 84vw, 76rem);
