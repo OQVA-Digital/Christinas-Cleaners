@@ -1,23 +1,24 @@
 :root {
     --light: #f8f8ff;
-    --light-a:#e6f3ff;
+    --light-a: #e6f3ff;
 
     --dark: #242d35;
-    --dark-a:#1b4354;
+    --dark-a: #1b3254;
 
     --c1: #ffd700;
-    --c1-a:#bfa300;
-    --c1-b:#403600;
-    --c1-c:#ffe471;
+    --c1-a: #bfa300;
+    --c1-b: #403600;
+    --c1-c: #ffe471;
 
-    --c2:#0057b7;
-    --c2-a:#004c9e;
-    --c2-b:#0072d8;
-    --c2-c:#0092ff;
-    --c2-d:#001b38;
-    --c2-e:#93c2e5;
+    --c2: #0057b7;
+    --c2-a: #004c9e;
+    --c2-b: #0072d8;
+    --c2-c: #0092ff;
+    --c2-d: #001b38;
+    --c2-e: #93c2e5;
 
-    --c3: #ff4400;--base-width: clamp(24rem, 84vw, 150rem);
+    --c3: #ff4400;
+    --width: clamp(24rem, 84vw, 150rem);
     --header-height: clamp(5rem, calc(7vh + 7vw), 8rem);
 }
 
@@ -40,7 +41,11 @@ h6 {
     cursor: default;
 }
 
-body, button, input, textarea, select {
+body,
+button,
+input,
+textarea,
+select {
     font-family: 'Golos Text', sans-serif;
 }
 
@@ -59,7 +64,7 @@ a {
 img {
     user-select: none;
     max-width: 100%;
-    height:auto;
+    height: auto;
     width: auto;
 }
 
@@ -118,8 +123,8 @@ button:not([type="submit"]):focus-visible {
     background-repeat: no-repeat;
 }
 
-.base_width {
-    width: var(--base-width);
+.width {
+    width: var(--width);
 }
 
 textarea {
@@ -131,9 +136,20 @@ textarea {
 }
 
 
-ul, ol {
+ul,
+ol {
     padding: unset;
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -147,8 +163,6 @@ ul, ol {
 /* Custom */
 
 
-
-
 .strip {
     width: 100%;
     background-color: var(--c2-a);
@@ -159,7 +173,7 @@ ul, ol {
     z-index: 1;
 }
 
-.strip>.base_width {
+.strip>.width {
     display: flex;
     justify-content: space-between;
     align-items: stretch;
@@ -250,7 +264,7 @@ header {
     box-shadow: 0 2.5rem 1rem -2rem rgb(147 194 229 / 15%);
 }
 
-header>.base_width {
+header>.width {
     display: flex;
     align-items: stretch;
     justify-content: space-between;
@@ -332,6 +346,7 @@ header .cta {
     align-items: center;
     gap: clamp(1.5rem, 2vw, 2.1rem);
     font-weight: 600;
+    max-width: 100%;
 }
 
 .cta_ctnr a:not(.cta) {
@@ -402,9 +417,102 @@ header .cta {
 
 
 
+
+
+
+
+
+
+
+/* Form defaults */
+
+
+form {
+    margin: 0 auto 2rem;
+    display: flex;
+    flex-direction: column;
+    /* gap: clamp(2rem, 2vw, 4rem); */
+    font-size: 1.45rem;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+form label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+input,
+textarea,
+select {
+    padding: clamp(0.8rem, 1vw, 1rem);
+    border-radius: 0.6rem;
+    border: unset;
+    background-color: #E8E8F9;
+    font-size: 1em;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+}
+
+input[type='date'],
+input[type='time'] {
+    line-height: 2.4;
+    padding: unset;
+    text-indent: clamp(0.8rem, 1vw, 1rem);
+}
+
+form button[type='submit'] {
+    display: block;
+    margin: 0 auto;
+    font-size: 1.6rem;
+    background-color: var(--c2-b);
+    color: var(--light);
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 0.6rem;
+    margin-top: clamp(2rem, 8vw, 3.5rem);
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (min-width:800px) {
 
-    header>.base_width {
+    header>.width {
         gap: 2rem;
     }
 

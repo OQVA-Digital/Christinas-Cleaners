@@ -143,7 +143,7 @@ h1 strong {
     border-bottom: 0.2rem solid var(--dark);
 }
 
-.intro .base_width>.ctnr {
+.intro .width>.ctnr {
     display: flex;
     flex-flow: row wrap;
     gap: clamp(2rem, 4vmax, 4rem);
@@ -151,7 +151,7 @@ h1 strong {
     position: relative;
 }
 
-.intro .base_width>.ctnr .content {
+.intro .width>.ctnr .content {
     max-width: 66rem;
     flex: 1;
     min-width: 24vw;
@@ -249,7 +249,7 @@ section.services {
     scroll-margin: calc(clamp(14rem, 55vw, 23rem) * -0.5);
 }
 
-.services .base_width {
+.services .width {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -372,7 +372,7 @@ h2+.txt {
     /* padding: 0.6rem 1.1rem; */
     /* border-radius: 1.1rem; */
     position: relative;
-    right: -4rem;
+    right: -3.7rem;
     /* background-image: linear-gradient(-170deg, #ffffff66, transparent 62%); */
     /* border: 0.2rem solid var(--c3); */
     /* width: 100%; */
@@ -384,7 +384,7 @@ h2+.txt {
 }
 
 .services .price .discount {
-    font-size: 0.6em;
+    font-size: 0.65em;
     flex-direction: column;
     align-items: end;
     justify-content: center;
@@ -422,7 +422,7 @@ box-shadow: -0.6rem 0.8rem 0.6rem -0.6rem var(--c2-e);
 }
 
 .services .price del {
-    font-weight: 500;
+    font-weight: 600;
     color: var(--dark);
     font-size: 1.3em;
 }
@@ -599,13 +599,13 @@ section.about {
     object-position: top;
 }
 
-.about .base_width {
+.about .width {
     display: flex;
     flex-direction: column;
     z-index: 1;
 }
 
-.about .base_width .ctnr {
+.about .width .ctnr {
     width: clamp(10rem, 85vw, 58rem);
     border-radius: 1.2rem;
     background-color: rgb(230 243 255 / 85%);
@@ -638,7 +638,7 @@ section.about {
     color: var(--c2-c);
 }
 
-.about .base_width p {
+.about .width p {
     font-size: clamp(1.3rem, 3.8vw, 1.7rem);
     font-weight: 500;
     line-height: 1.5;
@@ -718,11 +718,11 @@ section.testimonials {
     scroll-margin: var(--header-height);
 }
 
-.testimonials .base_width {
+.testimonials .width {
     width: 100%;
 }
 
-.testimonials .base_width .ctnr {
+.testimonials .width .ctnr {
     padding: clamp(6rem, 17vw, 8rem) 0 clamp(4rem, 12vw, 5rem);
     display: flex;
     flex-direction: column;
@@ -935,7 +935,7 @@ section.contact {
     scroll-margin: var(--header-height);
 }
 
-.contact .base_width {
+.contact .width {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -991,15 +991,6 @@ section.contact {
 }
 
 
-.contact form {
-    margin: 0 auto 2rem;
-    display: flex;
-    flex-direction: column;
-    /* gap: clamp(2rem, 2vw, 4rem); */
-    font-size: 1.45rem;
-    justify-content: space-evenly;
-    width: 100%;
-}
 
 .contact .vishyvka {
     margin-bottom: clamp(6rem, 10vw, 7rem);
@@ -1018,28 +1009,6 @@ section.contact {
     font-weight: 600;
 }
 
-.contact input,
-.contact textarea,
-.contact select {
-    padding: clamp(0.8rem, 1vw, 1rem);
-    border-radius: 0.6rem;
-    border: unset;
-    background-color: #E8E8F9;
-    font-size: 1em;
-    box-sizing: border-box;
-    display: block;
-    width: 100%;
-    min-width: 100%;
-    max-width: 100%;
-}
-
-.contact input[type='date'],
-.contact input[type='time'] {
-    line-height: 2.4;
-    padding: unset;
-    text-indent: clamp(0.8rem, 1vw, 1rem);
-}
-
 .contact form .obs {
     line-height: 1.5;
     color: var(--c2);
@@ -1048,20 +1017,6 @@ section.contact {
     text-align: center;
     max-width: 27rem;
     margin: 0 auto;
-}
-
-.contact button[type='submit'] {
-    display: block;
-    margin: 0 auto;
-    font-size: 1.6rem;
-    background-color: var(--c2-b);
-    color: var(--light);
-    width: 100%;
-    padding: 1.5rem;
-    border-radius: 0.6rem;
-    margin-top: clamp(2rem, 8vw, 3.5rem);
-    letter-spacing: 0.1rem;
-    cursor: pointer;
 }
 
 .contact form>.flex {
@@ -1085,14 +1040,6 @@ section.contact {
     flex-direction: column;
     gap: 1.5rem;
     width: clamp(10rem, 70vw, 37rem);
-}
-
-.contact form label {
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
-    font-weight: 600;
-    line-height: 1.4;
 }
 
 
