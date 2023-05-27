@@ -24,6 +24,18 @@ function success() {
     } else if(docLanguage == 'uk') {
         submitBt.innerHTML = "Надіслано успішно. Дякую тобі!"
     }
+
+    submitBt.classList.add('submited')
+
+    setTimeout(() => {
+      if(docLanguage == 'en') {
+          submitBt.innerHTML = "Send again"
+      } else if(docLanguage == 'uk') {
+          submitBt.innerHTML = "відправити знову"
+      }
+  
+      submitBt.classList.remove('submited')
+    }, 3000);
 }
   
 document.querySelector("form").addEventListener("submit", handleSubmit);
