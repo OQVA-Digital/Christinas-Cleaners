@@ -100,7 +100,7 @@ var slider = tns({
     center: true,
     items: 1,
     slideBy: 'page',
-    speed: 1000,
+    speed: 500,
     mouseDrag: true,
     autoWidth:true,
     controls:false,
