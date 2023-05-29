@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /protected/
+Disallow: /admin/
+Allow: /
+
+Sitemap: https://christinas-cleaners.co.uk/sitemap.xml
