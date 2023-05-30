@@ -1132,6 +1132,10 @@ section.contact {
         padding-bottom: 2rem;
     }
 
+    h1 {
+        font-size: clamp(3.2rem, calc(4vw - 1.7rem), 4.6rem);
+    }
+
     .intro video,
     .vid_ctnr {
         width: clamp(30rem, 41vw, 58rem);
