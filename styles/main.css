@@ -164,23 +164,34 @@ h1 strong {
 
 .vid_ctnr button {
     position: absolute;
-    width: 4rem;
-    height: 4rem;
-    bottom: clamp(1rem, 2vw, 2rem);
-    background-size: 100%;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     z-index: 1;
-    cursor: pointer;
 }
 
 .vid_ctnr .play_state {
-    left: clamp(1rem, 2vw, 2rem);
+    /* left: clamp(1rem, 2vw, 2rem); */
     background-image: url("../assets/icons/play.svg");
+    inset: 0;
+    margin: auto;
+    width: clamp(4rem, 4vw, 5rem);
+    height: clamp(6rem, 5vw, 7rem);
+}
+
+@keyframes fade_bt {
+    0% {
+        opacity: 1;
+    } 100% {
+        opacity: 0;
+    }
 }
 
 .vid_ctnr .sound_state {
+    width: 4rem;
+    height: 4rem;
     right: clamp(1rem, 2vw, 2rem);
+    bottom: clamp(1rem, 2vw, 2rem);
     background-image: url("../assets/icons/sound-on.svg");
 }
 
@@ -197,7 +208,7 @@ h1 strong {
     object-fit: cover;
     object-position: left;
     border-radius: clamp(1.5rem, 5vw, 4rem);
-    /* border: 0.2rem solid var(--light); */
+    border: 0.2rem solid var(--c1-c);
     z-index: 1;
     clip-path: inset(1px 1px);
     position: sticky;

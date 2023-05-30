@@ -109,7 +109,7 @@
                     </div>
                     
                     <div class="vid_ctnr">
-                        <video src="assets/video/christina_min.mp4" playsinline loop disablepictureinpicture poster="assets/video/christina-poster.jpg"></video>
+                        <video src="assets/video/christina.mp4" playsinline loop disablepictureinpicture poster="assets/video/christina-poster.jpg"></video>
 
                         <button class="play_state" type="button"></button>
                         <button class="sound_state" type="button"></button>
@@ -128,12 +128,23 @@
                             if(introVid.paused) {
                                 introVid.play()
 
-                                videoStateButton.style.backgroundImage = 'url("assets/icons/pause.svg")';
+                                videoStateButton.style.backgroundImage = 'url("assets/icons/play.svg")';
+
+                                videoStateButton.style.animation = 'unset'
+                                setTimeout(() => {
+                                videoStateButton.style.animation = 'fade_bt 0.6s forwards'
+                                }, 200);
 
                             } else {
                                 introVid.pause()
 
-                                videoStateButton.style.backgroundImage = 'url("assets/icons/play.svg")';
+                                videoStateButton.style.backgroundImage = 'url("assets/icons/pause.svg")';
+
+                                videoStateButton.style.animation = 'unset'
+
+                                setTimeout(() => {
+                                videoStateButton.style.animation = 'fade_bt 0.6s forwards'
+                                }, 200);
                             }
                         }
 
@@ -216,7 +227,7 @@
                             </div>
                         </div>
 
-                        <a class="cta" href="#get-a-quote">Price on Quote</a>
+                        <a class="cta" href="#get-a-quote">Get a Quote</a>
                     </div>
                     
                     <div class="box">
@@ -234,7 +245,7 @@
                             </div>
                         </div>
 
-                        <a class="cta" href="#get-a-quote">Price on Quote</a>
+                        <a class="cta" href="#get-a-quote">Get a Quote</a>
                     </div>
                     
                     <!-- <div class="box">
