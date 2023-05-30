@@ -109,6 +109,19 @@
                     </div>
                     
                     <video src="assets/video/christina_min.mp4" playsinline loop disablepictureinpicture poster="assets/video/christina-poster.jpg"></video>
+
+                    <script>
+                        const introVid = document.querySelector('.intro video')
+                        // let isPlaying = false;
+
+                        introVid.addEventListener('click', function() {
+                            if(introVid.paused) {
+                                introVid.play()
+                            } else {
+                                introVid.pause()
+                            }
+                        })
+                    </script>
                 </div>
             </div>
 

@@ -177,6 +177,14 @@ h1 strong {
     background-color: rgb(230 243 255 / 60%);
 }
 
+.intro video::after {
+    content:'';
+
+} .intro video::before {
+    content:'';
+    
+}
+
 .intro video::-webkit-media-controls-panel {
     background-image: linear-gradient(0deg, var(--c2), transparent);
 }
