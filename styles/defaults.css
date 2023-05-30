@@ -387,7 +387,7 @@ header .cta {
     cursor: pointer;
 }
 
-.hambt div {
+.hambt span {
     height: 20%;
     width: 100%;
     background-color: var(--c2);
