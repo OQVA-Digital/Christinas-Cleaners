@@ -206,7 +206,7 @@ h1 strong {
 
 .intro video {
     object-fit: cover;
-    object-position: left;
+    object-position: center;
     border-radius: clamp(1.5rem, 5vw, 4rem);
     border: 0.2rem solid var(--c1-c);
     z-index: 1;
