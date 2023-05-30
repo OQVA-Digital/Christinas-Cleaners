@@ -1,31 +1,30 @@
 // VIDEO LOADING
 
-const introVideo = document.querySelector('.intro video')
+// const introVideo = document.querySelector('.intro video')
 
-introVideo.addEventListener('loadeddata', function() {
-      var videos = [].slice.call(document.querySelectorAll("video.lazy"));
+// introVideo.addEventListener('loadeddata', function() {
+//       var videos = [].slice.call(document.querySelectorAll("video.lazy"));
 
-        var videoObserver = new IntersectionObserver(function(entries, observer) {
-          entries.forEach(function(video) {
-              // video.poster = video.dataset.poster;
-              for (var source in video.target.children) {
-                var videoSource = video.target.children[source];
-                if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
-                  videoSource.src = videoSource.dataset.src;
-                }
-              }
+//         var videoObserver = new IntersectionObserver(function(entries, observer) {
+//           entries.forEach(function(video) {
+//               // video.poster = video.dataset.poster;
+//               for (var source in video.target.children) {
+//                 var videoSource = video.target.children[source];
+//                 if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
+//                   videoSource.src = videoSource.dataset.src;
+//                 }
+//               }
     
-              video.target.load();
-              video.target.classList.remove("lazy");
-              videoObserver.unobserve(video.target);
-          });
-        });
+//               video.target.load();
+//               video.target.classList.remove("lazy");
+//               videoObserver.unobserve(video.target);
+//           });
+//         });
     
-        videos.forEach(function(video) {
-          videoObserver.observe(video);
-        });
-})
-
+//         videos.forEach(function(video) {
+//           videoObserver.observe(video);
+//         });
+// })
 
 
 

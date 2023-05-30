@@ -23,6 +23,7 @@
     <script src="scripts/main.js" defer></script>
     <script src="scripts/menu.js" defer></script>
     <script src="scripts/form.js" defer></script>
+    <script src="scripts/lazyload.js"></script>
 
     
 
@@ -107,7 +108,7 @@
                         </div>
                     </div>
                     
-                    <video src="assets/video/hero.mp4" autoplay playsinline muted loop poster="assets/video/hero-poster.jpg"></video>
+                    <video src="assets/video/christina.mp4" autoplay playsinline muted loop controls poster="assets/video/christina-poster.jpg"></video>
                 </div>
             </div>
 
@@ -214,8 +215,8 @@
         </section>
 
         <section class="about" id="about-us">
-            <video class="lazy" poster="assets/video/group-poster.jpg" autoplay playsinline muted loop>
-                <source data-src="assets/video/group.mp4" type="video/mp4">
+            <video class="lazy" poster="assets/video/gloves-cleaning-poster.jpg" autoplay playsinline muted loop>
+                <source data-src="assets/video/gloves-cleaning.mp4" type="video/mp4">
             </video>
             
             <div class="width">
@@ -510,5 +511,12 @@
 
         <a href="jobs/index.html" class="jobs">Work with us</a>
     </footer>
+
+    <script>
+        
+var lazyLoadInstance = new LazyLoad({
+  // Your custom settings go here
+});
+    </script>
 </body>
 </html>
