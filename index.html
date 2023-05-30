@@ -108,17 +108,45 @@
                         </div>
                     </div>
                     
-                    <video src="assets/video/christina_min.mp4" playsinline loop disablepictureinpicture poster="assets/video/christina-poster.jpg"></video>
+                    <div class="vid_ctnr">
+                        <video src="assets/video/christina_min.mp4" playsinline loop disablepictureinpicture poster="assets/video/christina-poster.jpg"></video>
+
+                        <button class="play_state" type="button"></button>
+                        <button class="sound_state" type="button"></button>
+                    </div>
 
                     <script>
                         const introVid = document.querySelector('.intro video')
+                        const videoStateButton = document.querySelector('.vid_ctnr .play_state')
+                        const soundStateButton = document.querySelector('.vid_ctnr .sound_state')
                         // let isPlaying = false;
 
-                        introVid.addEventListener('click', function() {
+                        introVid.addEventListener('click', togglePlayState)
+                        videoStateButton.addEventListener('click', togglePlayState)
+
+                        function togglePlayState() {
                             if(introVid.paused) {
                                 introVid.play()
+
+                                videoStateButton.style.backgroundImage = 'url("assets/icons/pause.svg")';
+
                             } else {
                                 introVid.pause()
+
+                                videoStateButton.style.backgroundImage = 'url("assets/icons/play.svg")';
+                            }
+                        }
+
+                        soundStateButton.addEventListener('click', function() {
+                            if(introVid.muted == false) {
+                                introVid.muted = true;
+
+                                soundStateButton.style.backgroundImage = 'url("assets/icons/sound-off.svg")';
+                            } else if(introVid.muted == true) {
+                                console.log('dandkasmsd')
+                                introVid.muted = false;
+
+                                soundStateButton.style.backgroundImage = 'url("assets/icons/sound-on.svg")';
                             }
                         })
                     </script>

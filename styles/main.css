@@ -157,41 +157,67 @@ h1 strong {
     min-width: 24vw;
 }
 
+.vid_ctnr {
+    margin-bottom: calc(clamp(30rem, calc(30vw + 30vh), 60rem) * -0.5);
+    position: relative;
+}
+
+.vid_ctnr button {
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    bottom: clamp(1rem, 2vw, 2rem);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.vid_ctnr .play_state {
+    left: clamp(1rem, 2vw, 2rem);
+    background-image: url("../assets/icons/play.svg");
+}
+
+.vid_ctnr .sound_state {
+    right: clamp(1rem, 2vw, 2rem);
+    background-image: url("../assets/icons/sound-on.svg");
+}
+
+.vid_ctnr,
 .intro video {
     width: 100%;
     height: clamp(30rem, calc(27vw + 27vh), 60rem);
-    object-fit: cover;
-    object-position: left;
-    border-radius: clamp(1.5rem, 5vw, 3rem);
-    margin-bottom: calc(clamp(30rem, calc(30vw + 30vh), 60rem) * -0.5);
-    max-width: clamp(30rem, 80vw, 60rem);
-    /* border: 0.2rem solid var(--light); */
+    max-width: clamp(30rem, 85vw, 60rem);
     margin-inline: auto;
     max-height: 80vh;
+}
+
+.intro video {
+    object-fit: cover;
+    object-position: left;
+    border-radius: clamp(1.5rem, 5vw, 4rem);
+    /* border: 0.2rem solid var(--light); */
     z-index: 1;
     clip-path: inset(1px 1px);
     position: sticky;
-    background-image: url(../assets/video/hero-poster.jpg);
+    background-image: url(../assets/video/christina-poster.jpg);
     background-size: cover;
     background-position: center;
     background-color: rgb(230 243 255 / 60%);
-}
-
-.intro video::after {
-    content:'';
-
-} .intro video::before {
-    content:'';
-    
 }
 
 .intro video::-webkit-media-controls-panel {
     background-image: linear-gradient(0deg, var(--c2), transparent);
 }
 
-.intro video::-webkit-media-controls-fullscreen-button {display: none !important;}
+.intro video::-webkit-media-controls-fullscreen-button {
+    display: none !important;
+}
 
-.intro video::-webkit-media-controls-timeline, .intro video::-webkit-media-controls-fullscreen-button, .intro video[pseudo="-internal-media-controls-overflow-button"] {
+.intro video::-webkit-media-controls-timeline,
+.intro video::-webkit-media-controls-fullscreen-button,
+.intro video[pseudo="-internal-media-controls-overflow-button"] {
     display: none;
 }
 
@@ -412,32 +438,32 @@ h2+.txt {
 
 .services .price .discount span {
 
-color: var(--c3);
+    color: var(--c3);
 
-font-weight: 600;
+    font-weight: 600;
 
-font-size: 0.8em;
+    font-size: 0.8em;
 }
 
 .services .price .final_price {
 
-font-size: 3.3rem;
+    font-size: 3.3rem;
 
-background-image: linear-gradient(-170deg, #ffffff66, transparent 62%);
+    background-image: linear-gradient(-170deg, #ffffff66, transparent 62%);
 
-border: 0.2rem solid var(--c3);
+    border: 0.2rem solid var(--c3);
 
-background-color: var(--c3);
+    background-color: var(--c3);
 
-padding: 0.5rem 1.1rem;
+    padding: 0.5rem 1.1rem;
 
-border-radius: 0.7rem;
+    border-radius: 0.7rem;
 
-align-items: center;
+    align-items: center;
 
-gap: 0.4rem;
+    gap: 0.4rem;
 
-box-shadow: -0.6rem 0.8rem 0.6rem -0.6rem var(--c2-e);
+    box-shadow: -0.6rem 0.8rem 0.6rem -0.6rem var(--c2-e);
 }
 
 .services .price del {
@@ -1095,7 +1121,8 @@ section.contact {
         padding-bottom: 2rem;
     }
 
-    .intro video {
+    .intro video,
+    .vid_ctnr {
         width: clamp(30rem, 41vw, 58rem);
         height: clamp(30rem, 59vw, 58rem);
         /* min-height: 65vh; */
