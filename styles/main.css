@@ -181,6 +181,8 @@ h1 strong {
     background-image: linear-gradient(0deg, var(--c2), transparent);
 }
 
+.intro video::-webkit-media-controls-fullscreen-button {display: none !important;}
+
 .intro video::-webkit-media-controls-timeline, .intro video::-webkit-media-controls-fullscreen-button, .intro video[pseudo="-internal-media-controls-overflow-button"] {
     display: none;
 }
