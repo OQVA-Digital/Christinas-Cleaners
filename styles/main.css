@@ -162,7 +162,7 @@ h1 strong {
     height: clamp(30rem, calc(27vw + 27vh), 60rem);
     object-fit: cover;
     object-position: left;
-    border-radius: clamp(1.5rem, 5vw, 4rem);
+    border-radius: clamp(1.5rem, 5vw, 3rem);
     margin-bottom: calc(clamp(30rem, calc(30vw + 30vh), 60rem) * -0.5);
     max-width: clamp(30rem, 80vw, 60rem);
     /* border: 0.2rem solid var(--light); */
@@ -175,6 +175,14 @@ h1 strong {
     background-size: cover;
     background-position: center;
     background-color: rgb(230 243 255 / 60%);
+}
+
+.intro video::-webkit-media-controls-panel {
+    background-image: linear-gradient(0deg, var(--c2), transparent);
+}
+
+.intro video::-webkit-media-controls-timeline, .intro video::-webkit-media-controls-fullscreen-button, .intro video[pseudo="-internal-media-controls-overflow-button"] {
+    display: none;
 }
 
 .intro .bottom_wave {
