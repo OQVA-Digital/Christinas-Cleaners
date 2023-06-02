@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Christina's Cleaners · Empowering Ukrainian Refugees</title>
 
-    <meta name="description" content=" Christina's Cleaners is a socially conscious cleaning company in Oxfordshire, committed to making a difference in the lives of female Ukrainian refugees.">
+    <meta name="description" content="We're a socially conscious cleaning company in Oxfordshire, committed to making a difference in the lives of female Ukrainian refugees.">
 
     <meta name="keywords" content="cleaning services, professional cleaning, domestic cleaning, commercial cleaning, skilled professionals, Ukrainian female refugees, empowering women, social integration, Oxfordshire, book cleaning services, deep cleaning, commercial cleaning solutions, positive social impact, fully insured team, free quote, premium cleaning services.">
 
@@ -92,7 +92,7 @@
                         <a href="tel:447425078684" aria-label="Call us at +44 74250 78684">Call us</a>
 
                         <a href="mailto:info@christinas-cleaners.co.uk" aria-label="E-mail us at info@christinas-cleaners.co.uk">Email us</a>
-                        
+
                         <a href="jobs/index.html" class="jobs" aria-label="Work with us link">Work with us</a>
                     </nav>
                 </div>
@@ -374,132 +374,133 @@
                 <div class="ctnr">
 
                     <form name="quote-submission" method="POST" data-netlify="true">
-                        <h2>Get a Quote</h2>
-    
+                        <h2 id="quote-heading">Get a Quote</h2>
+                    
                         <div class="txt"><strong>Christina's Cleaners operates across Oxford and its surrounding villages</strong>, including Headington, Cowley, Marston, Botley, and many more.</div>
-                        
+                    
                         <div class="content">
-                            <div class="form_step about_you current">
+                            <fieldset class="visible">
+                                <legend>About You</legend>
+                
                                 <p>
-                                    <label>Your Name: <input type="text" name="name" required>
+                                    <label for="name">Your Name:
+                                        <input type="text" id="name" name="name" required autocomplete="name" aria-required="true">
                                     </label>
                                 </p>
-    
+                
                                 <p>
-                                    <label>Surname: <input type="text" name="surname" required>
+                                    <label for="surname">Surname:
+                                        <input type="text" id="surname" name="surname" required autocomplete="family-name" aria-required="true">
                                     </label>
                                 </p>
-    
+                
                                 <p>
-                                    <label>Email: <input type="email" name="email" required></label>
+                                    <label for="email">Email:
+                                        <input type="email" id="email" name="email" required autocomplete="email" aria-required="true">
+                                    </label>
                                 </p>
-    
+                
                                 <p>
                                     <label for="phone">Contact Number:
-                                        <input type="tel" id="phone" name="phone" required>
+                                        <input type="tel" id="phone" name="phone" required autocomplete="tel" aria-required="true">
                                     </label>
                                 </p>
-    
+                
                                 <p>
                                     <label for="contactPreference">Preferred method of contact:
-                                        <select id="contactPreference" name="contactPreference" required>
+                                        <select id="contactPreference" name="contactPreference" required aria-required="true">
                                             <option disabled selected value="">--- Select ---</option>
-
                                             <option value="Email">Email</option>
                                             <option value="Phone">Phone</option>
                                         </select>
                                     </label>
                                 </p>
-                            </div>
+                            </fieldset>
 
-                            <div class="form_step about_property">
+                            <fieldset>
+                                <legend>About the Property</legend>
+                
                                 <p>
                                     <label for="streetAddress">Street Address:
-                                        <input type="text" id="streetAddress" name="streetAddress" required>
+                                        <input type="text" id="streetAddress" name="streetAddress" required autocomplete="street-address" aria-required="true">
                                     </label>
                                 </p>
-    
+                
                                 <p>
                                     <label for="postcode">Postcode:
-                                        <input type="text" id="postcode" name="postcode" required>
+                                        <input type="text" id="postcode" name="postcode" required autocomplete="postal-code" aria-required="true">
                                     </label>
                                 </p>
-    
+                
                                 <p>
                                     <label for="city">City:
-                                        <input type="text" id="city" name="city" required>
+                                        <input type="text" id="city" name="city" required autocomplete="address-level2" aria-required="true">
                                     </label>
                                 </p>
-                                
+                
                                 <p>
-                                    <label for="specialInstruction">Are there any special instruction for finding your property?
-                                        <textarea id="specialInstruction" name="specialInstruction"></textarea>
+                                    <label for="specialInstruction">Are there any special instructions for finding your property?
+                                        <textarea id="specialInstruction" name="specialInstruction" aria-describedby="specialInstructionDesc"></textarea>
                                     </label>
+                                    <span id="specialInstructionDesc" class="visually-hidden">Please provide any additional information that can help locate your property.</span>
                                 </p>
-                            </div>
+                            </fieldset>
 
-                            <div class="form_step about_clean">
-
+                            <fieldset>
+                                <legend>About the Cleaning</legend>
+                
                                 <p>
                                     <label for="cleaningService">Type of Cleaning Service required:
-                                        <select id="cleaningService" name="cleaningService" required>
+                                        <select id="cleaningService" name="cleaningService" required aria-required="true">
                                             <option disabled selected value="">--- Select ---</option>
-
                                             <option value="Regular Domestic Cleaning">Basic Clean</option>
                                             <option value="Subscription-based Regular Cleaning">Deep Clean</option>
                                             <option value="Specialised Cleaning Services">End of Tenancy Clean</option>
                                         </select>
                                     </label>
                                 </p>
-    
+                
                                 <p>
                                     <label for="bedrooms">Number of Bedrooms:
-                                        <input type="number" id="bedrooms" name="bedrooms" required>
+                                        <input type="number" id="bedrooms" name="bedrooms" required autocomplete="off" aria-required="true">
                                     </label>
                                 </p>
-    
+                
                                 <p>
                                     <label for="bathrooms">Number of Bathrooms:
-                                        <input type="number" id="bathrooms" name="bathrooms" required>
+                                        <input type="number" id="bathrooms" name="bathrooms" required autocomplete="off" aria-required="true">
                                     </label>
                                 </p>
-    
+                
                                 <p>
                                     <label for="otherRooms">Other rooms requiring cleaning (Please specify):
                                         <textarea id="otherRooms" name="otherRooms"></textarea>
                                     </label>
                                 </p>
-    
+                
                                 <p>
                                     <label for="extraAttention">Are there any specific areas needing extra attention or services required beyond the standard cleaning package?
                                         <textarea id="extraAttention" name="extraAttention"></textarea>
                                     </label>
                                 </p>
-    
+                
                                 <p>
                                     <label for="cleaningDate">Preferred Start Date:
-                                        <input type="date" id="cleaningDate" name="cleaningDate">
+                                        <input type="date" id="cleaningDate" name="cleaningDate" min="2023-06-02">
                                     </label>
-
-                                    <script>
-                                    document.getElementById("cleaningDate").min = new Date().toISOString().split("T")[0];
-
-                                    document.getElementById("cleaningDate").min = new Date().toISOString().split("T")[0];
-                                    </script>
                                 </p>
-    
+                
                                 <p>
                                     <label for="cleaningTime">Preferred Start Time:
-                                        <input type="time" id="cleaningTime" name="cleaningTime" min="08:00" max="20:00" required>
+                                        <input type="time" id="cleaningTime" name="cleaningTime" min="08:00" max="20:00" required autocomplete="off" aria-required="true">
                                         <sub>From 08:00 to 20:00</sub>
                                     </label>
                                 </p>
-    
+                
                                 <p>
                                     <label for="frequency">Frequency of Cleaning:
-                                        <select id="frequency" name="frequency" required>
+                                        <select id="frequency" name="frequency" required aria-required="true">
                                             <option disabled selected value="">--- Select ---</option>
-
                                             <option value="One-time">One-time</option>
                                             <option value="Weekly">Weekly</option>
                                             <option value="Bi-weekly">Bi-weekly</option>
@@ -507,27 +508,27 @@
                                         </select>
                                     </label>
                                 </p>
-    
+                
                                 <p>
                                     <label for="instructions">Are there any specific cleaning instructions or special requests?
                                         <textarea id="instructions" name="instructions"></textarea>
                                     </label>
                                 </p>
-    
+                
                                 <p>
                                     <label for="pets">Are there any pets in the house? If yes, please specify.
                                         <textarea id="pets" name="pets" required></textarea>
                                     </label>
                                 </p>
-                            </div>
+                            </fieldset>
 
-                            <div class="form_step payment">
-
+                            <fieldset>
+                                <legend>Payment</legend>
+                
                                 <p>
                                     <label for="payment">Preferred Method of Payment:
-                                        <select id="payment" name="payment" required>
+                                        <select id="payment" name="payment" required aria-required="true">
                                             <option disabled selected value="">--- Select ---</option>
-
                                             <option value="Credit Card">Credit Card</option>
                                             <option value="Debit Card">Debit Card</option>
                                             <option value="Bank Transfer">Bank Transfer</option>
@@ -535,14 +536,15 @@
                                         </select>
                                     </label>
                                 </p>
-
-                                <p class="obs">Please note that your booking is <b>subject to confirmation</b>. We will contact you shortly to confirm the details of your booking and provide you with a quote.</p>
-                            </div>
+                            </fieldset>
+                
+                            <p class="obs">Please note that your booking is <b>subject to confirmation</b>. We will contact you shortly to confirm the details of your booking and provide you with a quote.</p>
                         </div>
                         <p>
                             <button class="cta" type="submit" name="submit">Get a Quote!</button>
                         </p>
                     </form>
+                    
                     
                     <p class="email_us">Need more details? Drop us an email at <a href="mailto:info@christinas-cleaners.co.uk" aria-label="E-mail us to info@christinas-cleaners.co.uk">info@christinas-cleaners.co.uk</a>.</p>
                 </div>
