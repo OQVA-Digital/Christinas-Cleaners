@@ -39,3 +39,43 @@ function success() {
 }
   
 document.querySelector("form").addEventListener("submit", handleSubmit);
+
+
+
+
+const backBt = document.querySelector('.fieldset_controls .back')
+const nextBt = document.querySelector('.fieldset_controls .next')
+
+let formPosition = 0;
+
+const formFieldsets = document.querySelectorAll('.contact fieldset')
+
+formFieldsets[formPosition].classList.add('visible')
+
+const lastFieldPos = formFieldsets.length - 1
+
+function checkFieldsets(direction) {
+  if (direction == 'forwards') {
+    if (!formFieldsets[lastFieldPos].classList.contains('visible')) {
+      backBt.classList.remove('disabled');
+      formFieldsets[formPosition].classList.remove('visible');
+      formPosition++;
+      formFieldsets[formPosition].classList.add('visible');
+
+      if (formPosition === lastFieldPos) {
+        nextBt.classList.add('disabled');
+      }
+    }
+  } else if (direction == 'backwards') {
+    if (!formFieldsets[0].classList.contains('visible')) {
+      nextBt.classList.remove('disabled');
+      formFieldsets[formPosition].classList.remove('visible');
+      formPosition--;
+      formFieldsets[formPosition].classList.add('visible');
+
+      if (formPosition === 0) {
+        backBt.classList.add('disabled');
+      }
+    }
+  }
+}
