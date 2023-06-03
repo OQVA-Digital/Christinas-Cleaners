@@ -35,7 +35,7 @@ function success() {
       }
   
       submitBt.classList.remove('submited')
-    }, 3000);
+    }, 6000);
 }
   
 document.querySelector("form").addEventListener("submit", handleSubmit);
