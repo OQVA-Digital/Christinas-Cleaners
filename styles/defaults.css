@@ -481,9 +481,16 @@ form button[type='submit'] {
     cursor: pointer;
     width: 100%;
     max-width: 40rem;
+    font-weight: 400;
 }
 
-form button[type='submit'].submited {
+form button[type='submit'].disabled {
+    background-color: var(--c2-e);
+    font-weight: 500;
+    pointer-events: none;
+}
+
+body form button[type='submit'].submited {
     background-color: var(--c1);
     color: var(--c2-b);
     font-weight: 600;

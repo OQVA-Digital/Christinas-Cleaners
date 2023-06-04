@@ -460,23 +460,14 @@ h2+.txt {
 }
 
 .services .price .final_price {
-
     font-size: 3.3rem;
-
     background-image: linear-gradient(-170deg, #ffffff66, transparent 62%);
-
     border: 0.2rem solid var(--c3);
-
     background-color: var(--c3);
-
     padding: 0.5rem 1.1rem;
-
     border-radius: 0.7rem;
-
     align-items: center;
-
     gap: 0.4rem;
-
     box-shadow: -0.6rem 0.8rem 0.6rem -0.6rem var(--c2-e);
 }
 
@@ -1137,10 +1128,12 @@ section.contact {
 }
 
 .contact form fieldset>div {
+    min-width: clamp(10rem, 70vw, 37rem);
     width: clamp(10rem, 70vw, 37rem);
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    flex: 1;
 }
 
 .contact form fieldset p {

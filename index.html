@@ -565,13 +565,67 @@
     
                                 <button type="button" class="next" aria-label="Next fieldset button" onclick="checkFieldsets('forwards')">Next</button>
                             </div>
-                
-                            <p class="obs">Please note that your booking is <b>subject to confirmation</b>. We will contact you shortly to confirm the details of your booking and provide you with a quote.</p>
                         </div>
                         <p>
-                            <button class="cta" type="submit" name="submit">Get a Quote!</button>
+                            <button class="cta disabled" type="submit" name="submit">Get a Quote!</button>
+                
+                            <p class="obs">Please note that your booking is <b>subject to confirmation</b>. We will contact you shortly to confirm the details of your booking and provide you with a quote.</p>
                         </p>
                     </form>
+
+                    <script>
+                        const backBt = document.querySelector('.fieldset_controls .back')
+                        const nextBt = document.querySelector('.fieldset_controls .next')
+                        
+                        let formPosition = 0;
+                        
+                        const formFieldsets = document.querySelectorAll('.contact fieldset')
+                        
+                        formFieldsets[formPosition].classList.add('visible')
+                        
+                        const lastFieldPos = formFieldsets.length - 1
+                        
+                        function checkFieldsets(direction) {
+                          if (direction == 'forwards') {
+                            if (!formFieldsets[lastFieldPos].classList.contains('visible')) {
+                              backBt.classList.remove('disabled');
+                              formFieldsets[formPosition].classList.remove('visible');
+                              formPosition++;
+                              formFieldsets[formPosition].classList.add('visible');
+                        
+                              if (formPosition === lastFieldPos) {
+                                nextBt.classList.add('disabled');
+                              }
+                            }
+                          } else if (direction == 'backwards') {
+                            if (!formFieldsets[0].classList.contains('visible')) {
+                              nextBt.classList.remove('disabled');
+                              formFieldsets[formPosition].classList.remove('visible');
+                              formPosition--;
+                              formFieldsets[formPosition].classList.add('visible');
+                        
+                              if (formPosition === 0) {
+                                backBt.classList.add('disabled');
+                              }
+                            }
+                          }
+                        }
+                        
+                        
+                        const firstFields = document.querySelectorAll('.contact fieldset:first-child input, .contact fieldset:first-child select')
+                        
+                        for(i=0;i<firstFields.length;i++) {
+                          firstFields[i].addEventListener('input', function() {
+                            const allFilled = Array.from(firstFields).every(input => input.value.trim() !== '');
+                        
+                            if (allFilled) {
+                              submitBt.classList.remove('disabled')
+                            } else {
+                              submitBt.classList.add('disabled')
+                            }
+                          })
+                        }
+                    </script>
                     
                     
                     <p class="email_us">Need more details? Drop us an email at <a href="mailto:info@christinas-cleaners.co.uk" aria-label="E-mail us to info@christinas-cleaners.co.uk">info@christinas-cleaners.co.uk</a>.</p>
